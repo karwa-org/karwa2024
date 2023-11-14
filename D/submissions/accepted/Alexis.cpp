@@ -31,7 +31,7 @@ void solve() {
     for(int i = 1; i <= n; i++) {
         if(dp[i][k] != 0){
             int mask = dp[i][k];
-            for(int i = 0; i < 64; i++) {
+            for(int i = 1; i < 64; i++) {
                 if(((mask >> i) & 1) == 1) {
                     ans.push_back(a[i-1].first);
                 }
