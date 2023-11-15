@@ -17,8 +17,6 @@ vector<string> recurse(vector<pair<string, int>>& a, int offset, int sum) {
         return vector<string>();
     }
 
-    
-
     vector<string> v = recurse(a, offset - 1, sum);
     
     if(v.size() != 0) {
