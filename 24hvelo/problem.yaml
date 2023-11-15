@@ -1,9 +1,10 @@
-name: {'en': '24h velo'}
+name:
+  en: 24h velo
 author: Alexis Englebert
 # Contest name and year
-source: 
+source:
 # contest.region.eu
-source_url: 
+source_url:
 license: cc by-sa
 rights_owner: author
 # 'default', 'custom', or 'custom interactive'
