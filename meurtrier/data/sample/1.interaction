@@ -1,0 +1,16 @@
+< 6
+< Alexis
+< Bob 
+< Caroline
+< David
+< Eliot
+< Francois
+> ? Alexis Bob
+< NON
+> ? Bob Alexis
+< OUI
+> ? Caroline David
+< OUI
+> Eliot Francois
+< OUI
+> ! Eliot
