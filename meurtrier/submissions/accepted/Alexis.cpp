@@ -7,7 +7,6 @@
 #include <random>
 #include <cassert>
 
-
 using namespace std;
 
 void query(string a, string b, vector<string>& to_remove) {
@@ -27,14 +26,12 @@ void solve() {
     
     unordered_set<string> remaining_suspects;
     vector<string> suspects (n);
+
     for(int i = 0; i < n; i++) {
         string people; cin >> people;
         remaining_suspects.insert(people);
         suspects[i] = people;
     }
-
-    random_device rd;
-    mt19937 seed(rd());
 
     while(true) {
         
