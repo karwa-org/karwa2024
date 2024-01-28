@@ -40,7 +40,7 @@ void validate_secret(std::ifstream& in, OutputValidator& v, int& n_people) {
     while (true) {
         auto op = v.read_string("op", 1, 1, "?!");
         v.space();
-
+        // TODO CHECK IF PEOPLE EXISTS
         if (op == "?") {
             string person_a = v.read_string("person_a", 1, 10e6);
             v.space();
