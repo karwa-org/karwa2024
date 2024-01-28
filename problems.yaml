@@ -1,0 +1,10 @@
+- id: 24hvelo
+  label: A
+  name: 24h velo
+  rgb: '#000000'
+  time_limit: 2.0
+- id: meurtrier
+  label: B
+  name: Meurtrier
+  rgb: '#000000'
+  time_limit: 1.0
