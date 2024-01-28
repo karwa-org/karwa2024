@@ -22,18 +22,11 @@
 
 using namespace std;
 
-void validate_worst() {
-
-}
-
 void validate_secret(std::ifstream& in, OutputValidator& v, int& n_people) {
-    // In this mode the murder is fixed
-    // we have then a graph that represents relation
     string murder; in >> murder;
     int n_vertex; in >> n_vertex;
 
-    int max_querry = (n_people); 
-    // TODO check this
+    int max_querry = (n_people - 1); 
 
     map<string, map<string,bool>> seen;
 
@@ -63,8 +56,8 @@ void validate_secret(std::ifstream& in, OutputValidator& v, int& n_people) {
 
             n_queries++;
 
-            if(n_queries > (max_querry * 10)) {
-                v.WA("Used more than ", max_querry * 10, " queries (aborted)");
+            if(n_queries > (max_querry * 2)) {
+                v.WA("Used more than ", max_querry * 2, " queries (aborted)");
             }
 
         } else if (op == "!") {
@@ -80,7 +73,6 @@ void validate_secret(std::ifstream& in, OutputValidator& v, int& n_people) {
             v.WA("Unknown op ", op);
         }
     }
-
 }
 
 int main(int argc, char *argv[]) {
@@ -99,9 +91,7 @@ int main(int argc, char *argv[]) {
 
     string mode; in >> mode;
 
-    if (mode == "worst") {
-        validate_worst();
-    } else if (mode == "secret") {
+    if (mode == "secret") {
         validate_secret(in, v, n_people);
     } else {
         cerr << "Invalid mode: " << mode << endl;

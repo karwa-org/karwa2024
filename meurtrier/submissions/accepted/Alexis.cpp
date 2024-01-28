@@ -53,6 +53,9 @@ void solve() {
                 return;
             }
 
+        } else if ( remaining_size == 1) {
+            cout << "! " << v_suspects[0] << endl;
+            return;
         }
 
         int offset = remaining_size / 2;
@@ -62,7 +65,7 @@ void solve() {
         for(int i = 0; i < offset; i++) {
             string a = v_suspects[i];
             string b = v_suspects[i + offset];
-            
+
             query(a, b, to_remove);
 
         }
