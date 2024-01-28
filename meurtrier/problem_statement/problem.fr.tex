@@ -1,40 +1,37 @@
 \problemname{\problemyamlname}
 
 \illustration{0.3}{murder.jpg}{
-    Caption of the illustration (optional).
-    CC BY-SA 4.0 by irkhamgram on \href{https://www.vecteezy.com/vector-art/12335116-illustration-of-serial-killer-with-dagger-psychopath-spooky-the-background-is-filled-with-blood-suitable-for-halloween-themes-horror-movies-scary-murder-crime-flat-vector}{vecteezy}
+    Légende de l'illustration (facultatif).
+    CC BY-SA 4.0 par irkhamgram sur \href{https://www.vecteezy.com/vector-art/12335116-illustration-of-serial-killer-with-dagger-psychopath-spooky-the-background-is-filled-with-blood-suitable-for-halloween-themes-horror-movies-scary-murder-crime-flat-vector}{vecteezy}
 }
 
-\newcommand{\maxn}{10e4}  % max number of people
+\newcommand{\maxn}{10^4}  % nombre maximal de personnes
 
-On vous a appelé pour enquêter sur un crime qui a eu lieu dans un grand manoir. Quelqu'un a tué Mr Bob ! Fin détective comme vous êtes, vous avez déjà émis une hypothèse,
-Le meurtrier ne s'est pas fait voir par les autres membres de la maison avant le meurte. Étant donné que pour planifier un meurtre il faut être discret.
+Vous avez été appelé pour enquêter sur un crime qui a eu lieu dans un grand manoir. Quelqu'un a tué M. Bob ! En tant que fin détective que vous êtes, vous avez déjà émis une hypothèse : le meurtrier ne s'est pas fait voir par les autres membres de la maison avant le meurtre. Étant donné que pour planifier un meurtre, il faut être discret.
 
-Vous savez aussi que le meurtrier à du voir tout le monde pour planifier son meurtre. (Savoir si albert est dans la cuisine ou bien si michelle dans sa chambre).
+Vous savez également que le meurtrier a dû voir tout le monde pour planifier son meurtre (savoir si Albert est dans la cuisine ou si Michelle est dans sa chambre).
 
-Dès lors vous pouvez intéroger les $n$ personnes qui étaient dans la maison au moment du meurtre. 
-
+Vous pouvez interroger les $n$ personnes qui étaient dans la maison au moment du meurtre.
 
 \section*{Interaction}
-Votre programme doit retourner le nom du meurtrier. Pour ce faire, vous allez intéragir avec un programme.
+Votre programme doit retourner le nom du meurtrier. Pour ce faire, vous allez interagir avec un programme.
 
-En entrée vous aurez une ligne qui contient un entier $1 \le n \le 10000$ le nombre de personne.
-Ensuite $n$ lignes avec le nom des personnes présent dans le manoire. Il est garantis que le nom des personnent sont distincts et contiennent uniquement des lettres alphanumériques.
-Il est aussi garantis que la taille des noms et d'au maximum $1000$.
+En entrée, vous aurez une ligne contenant un entier $1 \le n \le 10000$, le nombre de personnes.
+Ensuite, $n$ lignes avec le nom des personnes présentes dans le manoir. Il est garanti que les noms des personnes sont distincts et contiennent uniquement des lettres alphanumériques. Il est également garanti que la taille des noms est au maximum de $1000$.
 
-Vous pouvez retourner une ligne avec l'un de ces mots:
+Vous pouvez retourner une ligne avec l'un de ces mots :
 
 \begin{itemize}
-    \item ``\texttt{? a b}'' demandez à $a$ si il a vu $b$.
-    \item ``\texttt{! a}'' la perssonne $a$ est le meurtrier.
+    \item ``\texttt{? a b}'' demandez à $a$ s'il a vu $b$.
+    \item ``\texttt{! a}'' la personne $a$ est le meurtrier.
 \end{itemize}
 
-L'interacteur vous répondera avec une ligne avec un de ces mots:
+L'interacteur vous répondra avec une ligne contenant l'un de ces mots :
+
 \begin{itemize}
-    \item ``\texttt{OUI}'' si la personne $a$ à vu la personne $b$.
+    \item ``\texttt{OUI}'' si la personne $a$ a vu la personne $b$.
     \item ``\texttt{NON}'' si la personne $a$ n'a pas vu la personne $b$.
 \end{itemize}
 
-Une fois un personne acussée, votre programme devra se terminer.
-Vous pouvez poser au maximum $n - 1$ questions. Si vous en posez plus, votre programme sera terminé et sera considéré comme faux. 
-%TODO : PROOF N - 1
+Une fois qu'une personne est accusée, votre programme devra se terminer.
+Vous pouvez poser au maximum $n - 1$ questions. Si vous en posez plus, votre programme sera terminé et sera considéré comme faux.

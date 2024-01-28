@@ -4,20 +4,19 @@
 \newcommand{\maxn}{64}
 
 \illustration{0.3}{image.jpg}{
-    Caption of the illustration
+    Légende de l'illustration
 }
-Après les 24H vélo, Alexandre fait ses comptes, malhereusement il ne sait plus ce qu'il a acheté car il a perdu ses tickets de caisse. Hereusement il se souvient des prix des objets et du montant qu'il a payé. Pouvez-vous retrouver quel objets il a acheté uniquement avec le montant total. Si il n'existe aucune solution retounrez -1. Il est garantis que les objets sont uniques et il n'est pas possible qu'Alexandre ait acheté plusieur fois le même objet. \\
-Si il existe plusieurs solutions, affichez l'une d'elles.
-% optionally define variables/limits for this problem
+Après les 24H vélo, Alexandre fait ses comptes. Malheureusement, il ne se souvient plus de ce qu'il a acheté car il a perdu ses tickets de caisse. Heureusement, il se rappelle des prix des objets et du montant total qu'il a payé. Pouvez-vous retrouver quels objets il a achetés uniquement avec le montant total ? S'il n'existe aucune solution, retournez -1. Il est garanti que les objets sont uniques, et il n'est pas possible qu'Alexandre ait acheté plusieurs fois le même objet. \\
+S'il existe plusieurs solutions, affichez-en une.
 
 \begin{Input}
-    l'entrée consiste de:
+    L'entrée consiste en :
     \begin{itemize}
-        \item Une ligne avec deux entiers $n, k$ ($0\leq n\leq \maxn$), $(0 \leq k \leq \maxk)$ le nombre d'objets et le montant total.
-        \item Une ligne avec $n$ objet. Chaque objet à un nom d'au plus $10^4$ caractères sans espaces et d'un prix $p$ qui est un entier. $(0 \leq p \leq \maxk)$
+        \item Une ligne avec deux entiers $n, k$ ($0 \leq n \leq \maxn$), $(0 \leq k \leq \maxk)$ représentant le nombre d'objets et le montant total.
+        \item Une ligne avec $n$ objets. Chaque objet a un nom d'au plus $10^4$ caractères sans espaces et un prix $p$ qui est un entier. $(0 \leq p \leq \maxk)$
     \end{itemize}
 \end{Input}
 
 \begin{Output}
-    Sortez le nombre d'objet qu'Alexandre à acheté suivit des objets. $-1$ si aucuns objet correspond au montant total.
+    Sortez le nombre d'objets qu'Alexandre a achetés suivis des noms des objets. Sortez $-1$ s'il n'y a aucun objet correspondant au montant total.
 \end{Output}
