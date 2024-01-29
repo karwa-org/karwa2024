@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 n, sus = int(input()), 0
 names = [input() for _ in range(n)]
 for i in range(1, n):
