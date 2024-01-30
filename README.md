@@ -24,3 +24,13 @@ To make sure all the sample & secret testcases work correctly, run:
 ```console
 bt run
 ```
+
+## Problem expected difficulty
+### Hard
+- 24H vélo
+
+### Medium
+- Flot
+
+### Easy
+- Meurtrier

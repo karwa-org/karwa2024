@@ -1,0 +1,60 @@
+\problemname{\problemyamlname}
+
+\illustration{0.3}{river.jpg}{
+    Légende de l'illustration (facultatif).
+    CC BY-SA 4.0 par Luz Eugenia sur \href{https://www.vecteezy.com/vector-art/5406687-wanderlust-scene-with-river}{vecteezy}
+}
+
+% Optionally define variables/limits for this problem
+\newcommand{\maxn}{}
+
+Vous êtes le coach de l'équipe de Belgique de course de bateau en papier sur l'eau ! La compétition consiste à déposer son bateau dans une rivière. Celui-ci se laissera porter par le courant de l'eau.
+Vous savez que les autres équipes sont très fortes étant donné qu'ils ont des géologues qui analysent le terrain de fond en comble. Vous connaissez les possibles endroits où les bateaux vont arriver ainsi que leurs départs.
+De plus, cette compétition a une particularité des plus étranges : la longueur des courants est toujours égale à $5$ mètres.
+
+Dès lors, vous voulez savoir pour chaque arrivée à quel endroit vous devez déposer votre bateau. Pour que celui-ci arrive le plus vite possible !
+
+\begin{figure}[h]
+    \begin{center}
+        \begin{tikzpicture}[>=stealth', shorten >=1pt, auto,
+            node distance=2.5cm, scale=1, 
+            transform shape, align=center,]
+
+            \begin{scope}[every node/.style={circle,thick,draw, minimum size=1cm} ]
+                \node (1)[red] at (0,0) {1};
+                \node (2) at (2,1) {2};
+                \node (3) at (2,-1) {3};
+                \node (4) at (5,-1) {4};
+                \node (5) at (5, 1) {5};
+                \node (6)[blue] at (7, 0) {6};
+            \end{scope}
+
+            \path[->] (1) edge node {} (2)
+                    (1) edge node {} (3)
+                    (2) edge node {} (5)
+                    (5) edge node {} (6)
+                    (3) edge node {} (4)
+                    (4) edge node {} (5)
+                    (2) edge node {} (4)
+                    (3) edge node {} (5)
+                    (4) edge node {} (6);
+
+        \end{tikzpicture}
+    \end{center}
+    \caption{Illustration du test 1}
+\end{figure}
+
+\begin{Input}
+    Une ligne avec un entier $n$ ($2 \le n \le 10^5$), le nombre de rivières.
+    Ensuite, un entier $m$ ($0 \le m \le 10^5$), le nombre de liens entre les rivières.
+    Ensuite, $m$ lignes contenant 3 entiers $u$,$v$, indiquant qu'il y a un courant de la rivière $u$ à la rivière $v$.
+    Ensuite, un entier $d$ ($ 0 \le d \le n$), le nombre de rivières où l'on peut commencer.
+    Ensuite, $d$ entiers, le numéro des rivières où l'on peut commencer.
+    Ensuite, un entier $a$ ($ 0 \le a \le n$), le nombre de rivières où l'on termine.
+    Ensuite, $a$ entiers, le numéro des rivières où l'on termine la course. 
+\end{Input}
+
+\begin{Output}
+    Pour chaque arrivée, un entier représentant le numéro de la rivière où l'on commence. Si plusieurs rivières ont la même distance, choisissez celui avec le plus petit indice.
+    S'il n'y a aucune rivière qui mène à une arrivée, affichez -1.
+\end{Output}

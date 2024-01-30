@@ -8,9 +8,9 @@
   name: Meurtrier
   rgb: '#001000'
   time_limit: 1.0
-- id: test
+- id: flot
   label: C
   name:
-    en: test
+    en: flot
   rgb: '#000000'
   time_limit: 1.0
