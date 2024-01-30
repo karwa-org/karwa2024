@@ -2,8 +2,10 @@
     \frametitle{\problemtitle}
         % TODO: Remove this comment when you're done writing the solutions.
         \begin{block}
-            {Problème} Trouver
+            {Problème} Pour une arrivée donnée trouver à quelle rivière rivière il faut déposer le bâteau. Calculer ça pour toutes les arrivés.
         \end{block}
         \pause
-        \textbf{Solution Naïve}: Dijkstra
+        \textbf{Solution Naïve}: Faire dijkstra sur chaque arrivée $\mapsto$ Trop lent ! $\mathcal{O}(d \cdot n \cdot log(n) + d \cdot m)$\\
+        \pause
+        \textbf{Solution}: Faire un multisource 0-5 BFS $\mathcal{O}(n + m)$
 \end{frame}
