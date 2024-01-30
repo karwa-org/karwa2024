@@ -2,9 +2,15 @@
   label: A
   name: 24h velo
   rgb: '#1000000'
-  time_limit: 2.0
+  time_limit: 1.0
 - id: meurtrier
   label: B
   name: Meurtrier
   rgb: '#001000'
+  time_limit: 1.0
+- id: test
+  label: C
+  name:
+    en: test
+  rgb: '#000000'
   time_limit: 1.0

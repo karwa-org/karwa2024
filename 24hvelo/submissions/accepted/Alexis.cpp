@@ -6,7 +6,7 @@ using namespace std;
 #define int long long
 
 const int max_n = 64;
-const int max_k = (int)(10e5);
+const int max_k = (int)(pow(10,5));
 int dp [max_n+1][max_k+1];
 
 void solve() {
