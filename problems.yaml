@@ -10,7 +10,6 @@
   time_limit: 1.0
 - id: flot
   label: C
-  name:
-    en: flot
+  name: {fr: flot}
   rgb: '#000000'
   time_limit: 1.0
