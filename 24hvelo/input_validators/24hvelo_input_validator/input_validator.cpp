@@ -1,6 +1,6 @@
 #include "validation.h"
 
-long long max_n = pow(10,5);
+long long max_n = 3 * pow(10,5);
 
 int main(int argc, char *argv[]) {
     InputValidator v(argc, argv);
