@@ -1,7 +1,6 @@
 \problemname{\problemyamlname}
 
 \illustration{0.3}{river.jpg}{
-    Légende de l'illustration (facultatif).
     CC BY-SA 4.0 par Luz Eugenia sur \href{https://www.vecteezy.com/vector-art/5406687-wanderlust-scene-with-river}{vecteezy}
 }
 
@@ -41,17 +40,19 @@ Dès lors, vous voulez savoir pour chaque arrivée à quel endroit vous devez d�
 
         \end{tikzpicture}
     \end{center}
-    \caption{Illustration du test 1}
+    \caption{Illustration du test 1, la rivière rouge représente celle où l'on commence potentiellement et la rivière bleue représente celle où l'on termine}.
 \end{figure}
 
 \begin{Input}
-    Une ligne avec un entier $n$ ($2 \le n \le 10^5$), le nombre de rivières.
-    Ensuite, un entier $m$ ($0 \le m \le 10^5$), le nombre de liens entre les rivières.
-    Ensuite, $m$ lignes contenant 3 entiers $u$,$v$, indiquant qu'il y a un courant de la rivière $u$ à la rivière $v$.
-    Ensuite, un entier $d$ ($ 0 \le d \le n$), le nombre de rivières où l'on peut commencer.
-    Ensuite, $d$ entiers, le numéro des rivières où l'on peut commencer.
-    Ensuite, un entier $a$ ($ 0 \le a \le n$), le nombre de rivières où l'on termine.
-    Ensuite, $a$ entiers, le numéro des rivières où l'on termine la course. 
+    \begin{enumerate}
+        \item Une ligne avec deux entier $n$ ($2 \le n \le 10^5$), $m$ ($0 \le m \le 10^5$), le nombre de rivières et le nombre de liens entre les rivières.
+        \item Suivit de $m$ lignes contenant 2 entiers $u$ ($1 \le u \le n$), $v$ ($1 \le v \le n$), indiquant qu'il y a un courant de la rivière $u$ à la rivière $v$.
+        \item Un entier $d$ ($ 0 \le d \le n$), le nombre de rivières où l'on peut commencer.
+        \item Suivit d'une ligne avec $d$ entiers, le numéro des rivières où l'on peut commencer.
+        \item Une ligne avec un entier $a$ ($ 0 \le a \le n$), le nombre de rivières où l'on termine.
+        \item Suivit d'une ligne avec $a$ entiers, le numéro des rivières où l'on termine la course. 
+    \end{enumerate}
+   
 \end{Input}
 
 \begin{Output}
