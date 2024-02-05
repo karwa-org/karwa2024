@@ -3,69 +3,17 @@
     \frametitle{\problemtitle}
         % TODO: Remove this comment when you're done writing the solutions.
         \begin{block}
-            {Problème} Trouver qui est le meurtrier parmis $n$ personnes.
+            {Problème} Trouver si le nombre de permutation d'une transposition est pair ou impair
         \end{block}
         \pause
-        \textbf{Solution Naïve}: Tester toutes les paires possibles. $\mathcal O(n^2)$ Trop d'opérations !
+        \textbf{Solution Naïve}: retirer une a une les permutations de la transposition, c'est compliqué !
 \end{frame}
 
 \begin{frame}
     \frametitle{\problemtitle}
     \begin{itemize}
-        \item<+-> À la place, on peut voir le problème comme un graphe.
-        \item<+-> \textbf{Graphe:} Ensemble de sommet (personnes) reliés par des lignes (A à vu B).
-            \\
-            \centering
-            \begin{figure}%[H]
-
-            \begin{tikzpicture}[>=stealth', shorten >=1pt, auto,
-                node distance=2.5cm, scale=1, 
-                transform shape, align=center,]
-
-                \begin{scope}[every node/.style={circle,thick,draw, minimum size=1cm}]
-                    \node (A) at (0,0) {Alexis};
-                    \node (B) at (0,3) {Bob};
-                    \node (C) at (2.5,4) {Caro};
-                    \node (D) at (5,0) {David};
-                    \node (E) at (2.5,-1) {Eliot};
-                    \node (F) at (5,3) {Frank} ;
-                \end{scope}
-
-                \path[->] (A) edge node {} (C)
-                (B) edge node {} (A)
-                (D) edge node {} (B)
-                (C) edge node {} (D)
-                (E) edge node {} (A)
-                (E) edge node {} (B)
-                (E) edge node {} (C)
-                (E) edge node {} (D)
-                (E) edge node {} (F);
-            
-            \end{tikzpicture}
-            \end{figure}
-        \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{\problemtitle}
-    Il y a deux cas possibles:
-    \begin{itemize}
-        \item<+-> \textbf{Cas 1:} La personne A à vue la personne B.
-            \begin{itemize}
-                \item Donc la personne B n'est pas le meurtrier.
-            \end{itemize}
-        \item<+-> \textbf{Cas 2:} La personne A n'a pas vue la personne B.
-            \begin{itemize}
-                \item Donc la personne B n'est pas le meurtrier.
-            \end{itemize}
-
-        \textbf{Solution} Stratégie de \textbf{Diviser pour régner}:
-        \begin{itemize}
-            \item<+-> On divise notre enssemble de personne en deux.
-            \item<+-> On demande à une personne de chaque groupe si elle a vue une personne de l'autre groupe.
-            \item<+-> On garde les potentiels meurtriers.
-            \item<+-> On répète jusqu'à ce qu'il ne reste que deux personnes.
-        \end{itemize}
-        Au total on fait $n-1$ opérations. Étant doné qu'a chaque question on élimine une personne. il nous faut donc $n-1$ questions pour trouver le meurtrier.
+        \item<+-> On pouvais calculer la signature de la transposition.
+        \item<+-> Si la signature vaut $-1$ alors la permutation est impaire, si elle vaut $1$, la permutation est paire
+        \item<+-> La siglature d'une transposition $\sigma$ est $\varepsilon(\sigma) = \prod_{1\leq i < j \leq N} \frac{sigma(j)-sigma(i)}{j-i}$
     \end{itemize}
 \end{frame}
