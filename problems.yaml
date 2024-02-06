@@ -13,3 +13,9 @@
   name: {fr: flot}
   rgb: '#000000'
   time_limit: 1.0
+- id: observatoire
+  label: D
+  name:
+    fr: observatoire
+  rgb: '#000000'
+  time_limit: 1.0

@@ -8,4 +8,34 @@
         \textbf{Solution Naïve}: Faire dijkstra sur chaque arrivée $\mapsto$ Trop lent ! $\mathcal{O}(d \cdot n \cdot log(n) + d \cdot m)$\\
         \pause
         \textbf{Solution}: Faire un multisource 0-5 BFS $\mathcal{O}(n + m)$
+
+        \begin{figure}[h]
+            \begin{center}
+                \begin{tikzpicture}[>=stealth', shorten >=1pt, auto,
+                    node distance=2.5cm, scale=1, 
+                    transform shape, align=center,]
+        
+                    \begin{scope}[every node/.style={circle,thick,draw, minimum size=1cm} ]
+                        \node (1)[red] at (0,0) {1};
+                        \node (2) at (2,1) {2};
+                        \node (3)[red] at (2,-1) {3};
+                        \node (4) at (5,-1) {4};
+                        \node (5)[red]  at (5, 1) {5};
+                        \node (6)[blue] at (7, 0) {6};
+                    \end{scope}
+
+                    \path[->] (1) edge node {} (2)
+                    (1) edge node {} (3)
+                    (2) edge node {} (5)
+                    (5) edge node {} (6)
+                    (3) edge node {} (4)
+                    (4) edge node {} (5)
+                    (2) edge node {} (4)
+                    (3) edge node {} (5)
+                    (4) edge node {} (6);
+                    
+                \end{tikzpicture}
+            \end{center}
+        \end{figure}
+
 \end{frame}
