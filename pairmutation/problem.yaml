@@ -1,14 +1,13 @@
-name:
-  fr: Pairmutation
+name: {'fr': 'Pairmutation'}
 author: Wauters Florian
 # Contest name and year
-source:
+source: Karwa
 # contest.region.eu
 source_url:
 license: cc by-sa
 rights_owner: author
 # 'default', 'custom', or 'custom interactive'
-validation: custom interactive
+validation: custom
 
 # One or more of:
 # case_sensitive
