@@ -7,7 +7,7 @@ source_url:
 license: cc by-sa
 rights_owner: author
 # 'default', 'custom', or 'custom interactive'
-validation: custom
+validation: default
 
 # One or more of:
 # case_sensitive
