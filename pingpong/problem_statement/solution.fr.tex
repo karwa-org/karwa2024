@@ -1,10 +1,17 @@
 \begin{frame}
     \frametitle{\problemtitle}
-    \begin{itemize}
-        % TODO: Remove this comment when you're done writing the solutions.
-        \item<+-> \textbf{Problem:} Print $4\sqrt n$ with sufficiently many digits.
-        \item<+-> Naive solution: do something stupid. $\mathcal O(2^n)$ is too slow!
-        \item<+-> Instead, just compute the answer. $\mathcal O(1)$.
-    \end{itemize}
-    % \solvestats
+        \begin{block}
+            {Problème} maximiser le nombre de verres à boire étant donné une balle qui rebondis tout les $x$ mètres.
+        \end{block}
+        \pause
+        \textbf{Solution Naïve}: Pour chaque rebonds tester si le verre $a_i$ est accesible. $\mathcal O(n^2)$ Trop lent !\\
+        \pause
+        \textbf{Solution}: Simuler chaque rebonds de manière intélligente, Pour un rebond $k$ on ittère à travers tout ses multiples. \\
+        \pause
+        \begin{align}
+            &\Rightarrow \sum_{i=1}^{n} \frac{n}{i}\\
+            &\Rightarrow n \cdot \underbrace{\sum_{i=1}^{n} \frac{1}{i}}_{\text{Série harmonique $\mapsto log n + \gamma$ }}
+        \end{align}
+        $\Rightarrow$ ce qui mène à une complexité de $\mathcal O(n \cdot log n)$
+
 \end{frame}
