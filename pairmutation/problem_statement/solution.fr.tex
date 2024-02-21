@@ -3,7 +3,7 @@
     \frametitle{\problemtitle}
         % TODO: Remove this comment when you're done writing the solutions.
         \begin{block}
-            {Problème} Trouver si le nombre de permutation d'une transposition est pair ou impair
+            {Problème} Trouver si le nombre de permutation d'une transposition est pair ou impair.
         \end{block}
         \pause
         \textbf{Solution Naïve}: retirer une a une les permutations de la transposition, c'est compliqué !
@@ -13,7 +13,8 @@
     \frametitle{\problemtitle}
     \begin{itemize}
         \item<+-> On pouvais calculer la signature de la transposition.
-        \item<+-> Si la signature vaut $-1$ alors la permutation est impaire, si elle vaut $1$, la permutation est paire
-        \item<+-> La siglature d'une transposition $\sigma$ est $\varepsilon(\sigma) = \prod_{1\leq i < j \leq N} \frac{sigma(j)-sigma(i)}{j-i}$
+        \item<+-> Si la signature vaut $-1$ alors la permutation est impaire, si elle vaut $1$, la permutation est paire.
+        \item<+-> La siglature d'une transposition $\sigma$ est $\varepsilon(\sigma) = \prod_{1\leq i < j \leq N} \frac{sigma(j)-sigma(i)}{j-i}$.
+        \item<+-> Étant donné que l'on s'intéresse au signe de la signature, on peut multiplier par $-1$ et $1$ pour éviter les problèmes de précision lié au floats potentiellement grands.
     \end{itemize}
 \end{frame}

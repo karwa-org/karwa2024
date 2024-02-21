@@ -8,7 +8,7 @@ def pairmutation(perms):
                 continue
             else:
                 i, j = k+1, l+1
-                prod *= (perms[l] - perms[k])/(j-i)
+                prod *= -1 if (perms[l] - perms[k])/(j-i) < 0 else 1
     return prod
 
-print("Pair" if pairmutation(permutation)==1 else "Impair")
+print("Pair" if pairmutation(permutation) > 0 else "Impair")
