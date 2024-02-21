@@ -13,3 +13,14 @@
   name: {fr: flot}
   rgb: '#000000'
   time_limit: 1.0
+- id: observatoire
+  label: D
+  name:
+    fr: observatoire
+  rgb: '#000000'
+  time_limit: 1.0
+- id: pairmutation
+  label: E
+  name: {fr: Pairmutation}
+  rgb: '#001000'
+  time_limit: 1.0
