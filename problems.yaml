@@ -13,3 +13,8 @@
   name: {fr: flot}
   rgb: '#000000'
   time_limit: 1.0
+- id: pingpong
+  label: D
+  name: {fr: PingPong}
+  rgb: '#000000'
+  time_limit: 1.0
