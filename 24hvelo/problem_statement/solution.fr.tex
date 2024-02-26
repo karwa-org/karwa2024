@@ -1,3 +1,4 @@
+
 % TODO: Remove this comment when you're done writing the solutions.
 \begin{frame}
     \frametitle{\problemtitle}
@@ -28,6 +29,16 @@
     \begin{align*}
         DP[i][j] = DP[i-1][j] \,|\, DP[i-1][j-c_i]
     \end{align*}
-    Todo mieux expliquer ça.\\
+    
+    \begin{table}[]
+      \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|}
+      \hline
+      \textbf{N\textbackslash{}K} & \textbf{0} & \textbf{1} & \textbf{2} & \textbf{2} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} \\ \hline
+      \textbf{0 (lait)}   & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
+      \textbf{1 (curry)}  & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
+      \textbf{2 (persil)} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
+      \end{tabular}
+    \end{table}
+    
     Complexitée totale: $\mathcal O(n \cdot k)$
 \end{frame}
