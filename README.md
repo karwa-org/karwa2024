@@ -28,6 +28,7 @@ bt run
 ## Problem expected difficulty
 ### Hard
 - 24H vélo
+- Bombe
 
 ### Medium
 - Flot
