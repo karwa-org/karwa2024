@@ -24,9 +24,9 @@
   name: {fr: Pairmutation}
   rgb: '#001000'
   time_limit: 1.0
-- id: bomb
+- id: bombe
   label: F
   name:
-    en: bomb
+    fr: bombe
   rgb: '#000000'
   time_limit: 1.0
