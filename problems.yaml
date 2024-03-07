@@ -15,11 +15,18 @@
   time_limit: 1.0
 - id: pingpong
   label: D
-  name: {fr: PingPong}
+  name:
+    fr: PingPong
   rgb: '#000000'
   time_limit: 1.0
 - id: pairmutation
   label: E
   name: {fr: Pairmutation}
   rgb: '#001000'
+  time_limit: 1.0
+- id: bomb
+  label: F
+  name:
+    en: bomb
+  rgb: '#000000'
   time_limit: 1.0

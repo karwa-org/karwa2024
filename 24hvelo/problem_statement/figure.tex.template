@@ -1,7 +1,12 @@
+\usepackage{colortbl}
+\PassOptionsToPackage{table}{xcolor}
 \documentclass[margin=5pt]{standalone}
 \usepackage{array}
 \usepackage{amsmath,amssymb}
 \usepackage{tikz}
+
+//\usepackage[table,xcdraw]{xcolor}
+
 \usetikzlibrary{arrows}
 \usetikzlibrary{shapes}
 \usetikzlibrary{backgrounds}
