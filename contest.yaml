@@ -2,8 +2,8 @@
 # OLD: https://ccs-specs.icpc.io/ccs_system_requirements?#contestyaml
 # NEW: https://ccs-specs.icpc.io/contest_archive_format#contest-object
 # Commented values are defaults
-id:                         Karwa
-name:                       Karwa
+id:                         karwa2024
+name:                       KARWa 2024
 #formal_name:                teste
 start_time:                 2023-01-01T12:00:00Z
 duration:                   5:00:00
@@ -11,7 +11,7 @@ scoreboard_freeze_duration: 1:00:00
 #penalty_time:               20
 
 # Latex fields:
-title: Karwa 2024
+title: KARWa 2024
 subtitle: 
 year: 2024
 author: Jury
