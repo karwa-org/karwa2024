@@ -30,3 +30,9 @@
     fr: bombe
   rgb: '#000000'
   time_limit: 1.0
+- id: sncb
+  label: G
+  name:
+    fr: sncb
+  rgb: '#000000'
+  time_limit: 1.0

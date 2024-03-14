@@ -17,7 +17,7 @@ while changed:
             v = max(map(lambda j: dist[j], succ[i])) + 1
         else:
             v = min(map(lambda j: dist[j], succ[i])) + 1
-        if not changed and v < dist[i]:
+        if v < dist[i]:
             new_dist[i] = v
             changed = True
     dist = new_dist

@@ -1,8 +1,9 @@
 \begin{frame}
     \frametitle{\problemtitle}
     \begin{itemize}
-        \item<+-> \textbf{Problème:} Étant donné un graphe dirigé avec un joueur min (passager) et un joueur max (sncb), calculer en combien de coût on peut atteindre la destination si on joue optimalement et que l'adversaire joue également optimalement pour nous retarder au maximum.
-        \item<+-> Algorithme MIN-MAX (en théorie des jeux: attracteur pour calculer la valeur du sommet $0$).
+        \item<+-> \textbf{Problème:} Accessibilité (quantitative) dans un jeu sur graphe, à somme nulle et à deux joueurs !
+        \item<+-> On a un graphe dirigé $(V,E)$, sommets $V_1$ représentant les gares dont le passager n'a aucun contrôle et $V_0$ les autres. On veut calculer en combien de coût on peut atteindre la destination si on joue optimalement et que l'adversaire joue également optimalement pour nous retarder au maximum.
+        \item<+-> Résolvable par un algorithme d'attracteur (peut aussi être vu comme un MIN-MAX): $\mathcal{O}(|V| + |E|).
     \end{itemize}
     \solvestats
 \end{frame}
