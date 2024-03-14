@@ -19,7 +19,7 @@ void dfs(int current, vector<vector<int>>& adj, vector<bool>& visited, vector<bo
 	
 	if(current == 1){
 		cout << depth -1 << endl;
-		return;
+		exit(0);
 	}
 	int maxdist = -1;
 	int mindist = INF;
@@ -31,6 +31,7 @@ void dfs(int current, vector<vector<int>>& adj, vector<bool>& visited, vector<bo
 				idx = k;
 			}
 		}
+		if(idx == -1) return;
 		dfs(idx, adj, visited, f, depth+1, dist);
 	} else {
 		bool direct = false;
@@ -44,6 +45,7 @@ void dfs(int current, vector<vector<int>>& adj, vector<bool>& visited, vector<bo
 				direct = true;
 			}
 		}
+		if(idx == -1) return;
 		if(!direct){
 			dfs(idx, adj, visited, f, depth+1, dist);
 		}
@@ -78,7 +80,7 @@ void solve() {
 	while(!q.empty()){
 		int current = q.front(); q.pop();
 		for(auto& k : rev_adj[current]){
-			if(dist[k] == INF || dist[k] > dist[current] +1 || f[k] && dist[k] < dist[current] +1 && dist[current] < 10000 && cnt[current] < 4){
+			if(dist[k] == INF || dist[k] > dist[current] +1 || (f[k] && dist[k] < dist[current] +1 && dist[current] < 10000 && cnt[current] < 4)){
 				dist[k] = dist[current]+1;
 				cnt[k]++;
 				q.push(k);
@@ -90,7 +92,7 @@ void solve() {
 	vector<bool> visited(n, false);
 	
 	dfs(0, adj, visited, f, 0, dist);
-	
+	cout << "Impossible\n";
 }
 
     
