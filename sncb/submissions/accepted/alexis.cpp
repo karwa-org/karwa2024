@@ -34,21 +34,15 @@ void dfs(int current, vector<vector<int>>& adj, vector<bool>& visited, vector<bo
 		if(idx == -1) return;
 		dfs(idx, adj, visited, f, depth+1, dist);
 	} else {
-		bool direct = false;
 		for(auto& k : adj[current]){
 			if(dist[k] < mindist){
 				mindist = dist[k];
 				idx = k;
 			}
-			if(k == 1) {
-				dfs(k, adj, visited, f, depth+1,dist);
-				direct = true;
-			}
 		}
 		if(idx == -1) return;
-		if(!direct){
-			dfs(idx, adj, visited, f, depth+1, dist);
-		}
+		dfs(idx, adj, visited, f, depth+1, dist);
+
 	}
 }
 
