@@ -33,7 +33,8 @@ bt run
 ### Medium
 - Flot
 - Pairmutation
+- Ping-pong
+- SNCB
 
 ### Easy
 - Meurtrier
-- Ping-pong
