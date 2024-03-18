@@ -33,6 +33,12 @@
 - id: sncb
   label: G
   name:
-    fr: sncb
+    fr: SNCB
+  rgb: '#000000'
+  time_limit: 2.0
+- id: tomates
+  label: H
+  name:
+    fr: Tomates
   rgb: '#000000'
   time_limit: 1.0
