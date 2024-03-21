@@ -1,3 +1,5 @@
+input() # permet d'ignorer la première ligne inutile
+
 permutation = list(map(int, input().split()))
 
 def pairmutation(perms):
