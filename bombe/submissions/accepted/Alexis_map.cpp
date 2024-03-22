@@ -4,6 +4,7 @@
 #include <unordered_map>
 #include <set>
 #include <vector>
+#include <map>
 
 #define int long long
 
@@ -35,7 +36,7 @@ void solve() {
         pre[i] = safeMod((pre[i-1] * A), MOD);
     }
     vector<int> hs(n);
-    unordered_map<int, pair<int, int>> cnt;
+    map<int, pair<int, int>> cnt;
 
     for(int i = 0; i < n; i++) {
         int hash = 0;
@@ -51,12 +52,12 @@ void solve() {
 
     for(int i = 0; i < n; i++) {
         for(int j = 0; j < m; j++) {
-            hs[i] -= (a[i][m-j-1] * pre[m-1])% MOD;
-            hs[i] %= MOD;
+            hs[i] -= safeMod((a[i][m-j-1] * pre[m-1]), MOD);
+            hs[i] = safeMod(hs[i],MOD);
             hs[i] *= A;
-            hs[i] %= MOD;
+            hs[i] = safeMod(hs[i] ,MOD);
             hs[i] += a[i][m-j-1];
-            hs[i] %= MOD;
+            hs[i] = safeMod(hs[i], MOD);
 
             if(cnt[hs[i]].first == 0){
                 cnt[hs[i]].first = i+1;

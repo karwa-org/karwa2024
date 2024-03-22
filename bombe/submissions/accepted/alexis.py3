@@ -1,7 +1,7 @@
 import collections
 import sys
 input = sys.stdin.readline
-MOD = (1 << 59)
+MOD = (1 << 40)
 A = 911382323
 
 def safeMod(a, m):
