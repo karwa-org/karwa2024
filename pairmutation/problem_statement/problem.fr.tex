@@ -7,24 +7,24 @@
 Dans le \textbf{K}omté \textbf{A}cculé mais \textbf{R}établit et \textbf{W}izardesquement \textbf{A}bstrait se tiens un concours annuel pour célébrer la paix avec le \textbf{C}omté \textbf{P}resque \textbf{U}nanimement \textbf{M}asqué mais \textbf{O}bservateur et \textbf{N}aturellement \textbf{S}upérieur.
 Cette année vous avez l'honneur de pouvoir vous présenter et montrer a tous que vous êtes le meilleur mage. Cette année, l'épreuve est la suivante : \\
 
-Devant vous se présenterons un nombres $N$ aléatoire de ballons numérotés. Ces balons magiques sont et change de places, vous vous rendez alors compte qu'il ne changent pas aléatoirement de place mais suivent un schéma. En effet, ceux si vont toujours se déplacer vers l'ancienne position d'un même ballon.
+Devant vous se présenterons un nombres $n$ aléatoire de ballons numérotés. Ces balons magiques sont et change de places, vous vous rendez alors compte qu'il ne changent pas aléatoirement de place mais suivent un schéma. En effet, ceux si vont toujours se déplacer vers l'ancienne position d'un même ballon.
 Par exemple, si le ballon $n$ se déplaçait vers le ballon $m$, alors le ballon $n$ se déplacera toujours vers le ballon $m$ par la suite. Il se peut également qu'un ballon ne se déplace pas du tout, aucun ballon ne peut donc venir prendre sa place.
 Il vous est demandé de déterminer le nombre de permutation que présente cette séquence, cela tombe bien car vous connaissez justement un sort qui donne cette réponse a la condition que vous sachiez dire si cette séquence présente un nombre pair ou impair de permutations.
 Une permutation est un échange entre deux ballon, par exemple, si le ballon $2$ se déplace vers le ballon $5$ et que le ballon $5$ se déplace vers le ballon $2$, il s'agit d'une permutation.
 Il est garanti que toute séquence peut se décomposer en un nombre fini de permutation de deux ballons.
 
-\underline{comment interpréter les séquences :} prenez une séquence $a\ b\ ...\ n$ cette séquence dit que le ballon $1$ va se déplacer vers le ballon $a$, le ballon $2$ vers le ballon $b$, etc.\\
+\underline{Comment interpréter les séquences :} prenez une séquence $a\ b \dots n$ cette séquence dit que le ballon $1$ va se déplacer vers le ballon $a$, le ballon $2$ vers le ballon $b$, etc.\\
 Ainsi, la séquence $1\ 2\ 3$ ne bouge aucun ballon, en effet, le ballon $1$ reste a sa place de même que les ballons $2$ et $3$.\\
 En revanche, la séquence $3\ 2\ 1$ permute le ballon $1$ et le ballon $3$ et laisse le ballon $2$ à sa place, elle contient donc une seule permutation.
 
 \begin{Input}
+    L'entrée consiste en :
     \begin{itemize}
-        \item Une ligne avec $1 \le n \le 10^4$ entiers définissant une séquence (il est garanti que chaque entier apparait une unique fois)
+        \item une ligne contenant un entier $n$ ($1 \le n \le 10^6$) donnant la longueur de la séquence,
+        \item une ligne contenant $n$ entiers $k_1 \dots k_n$ (for all $i$, $1 \le k_i \le n$). Il est garanti que chaque entier entre $1$ et $n$ apparait une unique fois.
     \end{itemize}
 \end{Input}
 
 \begin{Output}
-    \begin{itemize}
-        \item Une ligne avec le mot "Pair" si la séquence contient un nombre pair de permutations, "Impair" dans le cas contraire
-    \end{itemize}
+    Le mot \texttt{Pair} si la séquence contient un nombre pair de permutations, \texttt{Impair} dans le cas contraire
 \end{Output}
