@@ -36,3 +36,15 @@
     fr: sncb
   rgb: '#000000'
   time_limit: 1.0
+- id: antennes
+  label: H
+  name:
+    fr: Antennes en pagailles
+  rgb: '#000000'
+  time_limit: 1.0
+- id: carre
+  label: I
+  name:
+    en: carre
+  rgb: '#000000'
+  time_limit: 1.0
