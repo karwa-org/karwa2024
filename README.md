@@ -25,16 +25,17 @@ To make sure all the sample & secret testcases work correctly, run:
 bt run
 ```
 
-## Problem expected difficulty
+## Problem expected difficulty (from bottom to top)
 ### Hard
-- 24H vélo
 - Bombe
+- 24H vélo
 
 ### Medium
 - Flot
-- Pairmutation
-- Ping-pong
 - SNCB
+- Ping-pong
+- Pairmutation
 
 ### Easy
 - Meurtrier
+- Tomates
