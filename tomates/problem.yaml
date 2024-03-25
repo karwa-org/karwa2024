@@ -1,0 +1,26 @@
+name:
+  fr: Tomates
+author: Christophe Grandmont
+# Contest name and year
+source: KARWa
+# contest.region.eu
+source_url: 
+license: mit
+rights_owner: Louvain-li-Nux && CPUMons
+# 'default', 'custom', or 'custom interactive'
+validation: default
+uuid: Tomates
+
+# One or more of:
+# space_change_sensitive
+# float_absolute_tolerance eps
+# float_relative_tolerance eps
+# float_tolerance eps
+#validator_flags: float_tolerance 0.0000011
+
+# To change the time limit factors for problemtools/Kattis, use:
+# limits:
+# Time limit is 2*slowest accepted submission: (default: 5)
+#     time_multiplier: 2
+# Warning for submissions within 50% of time limit
+#     time_safety_margin: 1.5

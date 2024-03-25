@@ -1,0 +1,25 @@
+\problemname{\problemyamlname}
+
+\begin{wrapfigure}{r}{5.5cm}
+    \centering
+    \includegraphics[width=5.5cm]{tomates.jpeg}
+\end{wrapfigure}
+
+Après le carnage musical du KARWa-au-quai de l'année dernière, les organisateurs ont prévu un outil de sécurité au cas où un chanteur tourne à la catastrophe: des \emph{tomates}. Pour cette année, chaque personne du public sera équipée de $k$ tomates à lancer sur les chanteurs, ils sont libres de n'en lancer aucune, bien évidemment.
+
+Un nouveau système de notation pour évaluer les performances des chanteurs a été mis en place. Chaque chanteur démarre à $n$ points, et chaque tomate lancée par le public durant la performance diminue sa note de $1$, jusqu'à un minimum de $0$.
+
+Vous chantez en dernier, et en fin stratège que vous êtes, vous avez été attentif au nombre de tomates lancées par le public et combien de spectateurs sont présents. Vous cherchez donc à connaître votre note minimale.
+
+\begin{Input}
+	L'entrée consiste en :
+	\begin{itemize}
+		\item une ligne contenant un entier $n$ ($0 < n \le 10^{16}$), la note maximale à laquelle démarrent les chanteurs,
+		\item une ligne contenant deux entiers $m$ et $k$ ($0 < m \le 10^9$, $0 < k \le 10^9$), respectivement le nombre de spectateurs dans le public et le nombre de tomate que chaque spectateur reçoit,
+		\item une ligne contenant un entier $p$ ($0 \le p \le m \cdot k$), le nombre de tomates déjà lancées
+	\end{itemize}
+\end{Input}
+
+\begin{Output}
+	Un entier entre $0$ et $n$, la note minimale que vous pouvez obtenir.
+\end{Output}

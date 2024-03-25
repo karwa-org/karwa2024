@@ -1,0 +1,1 @@
+print(max(0,int(input())-(__import__('functools').reduce(lambda x,y:x*y,list(map(int, input().split())))-int(input()))))

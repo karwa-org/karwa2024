@@ -11,12 +11,12 @@ using namespace std;
 
 
 //TODO: CHECK IF BAD CONSTANT TO BE FAIR DURING THE CONTEST
-int MOD = (1LL << 59);
+int MOD = (1LL << 40);
 int A = 911382323;
 
 int safeMod(int a, int m) {
     return (a % m + m) % m;
-    }
+}
 
 void solve() {
 
@@ -35,7 +35,7 @@ void solve() {
         pre[i] = safeMod((pre[i-1] * A), MOD);
     }
     vector<int> hs(n);
-    unordered_map<int, set<int>> cnt;
+    unordered_map<int, pair<int, int>> cnt;
 
     for(int i = 0; i < n; i++) {
         int hash = 0;
@@ -45,31 +45,36 @@ void solve() {
             hash = safeMod(hash, MOD);
         }
         hs[i] = hash;
-        cnt[hs[i]].insert(i+1);
+
+        cnt[hs[i]].first = i+1;
     }
 
     for(int i = 0; i < n; i++) {
         for(int j = 0; j < m; j++) {
-            hs[i] -= safeMod((a[i][m-j-1] * pre[m-1]), MOD);
-            hs[i] = safeMod(hs[i],MOD);
+            hs[i] -= (a[i][m-j-1] * pre[m-1])% MOD;
+            hs[i] %= MOD;
             hs[i] *= A;
-            hs[i] = safeMod(hs[i] ,MOD);
+            hs[i] %= MOD;
             hs[i] += a[i][m-j-1];
-            hs[i] = safeMod(hs[i], MOD);
+            hs[i] %= MOD;
 
-            cnt[hs[i]].insert(i+1);
+            if(cnt[hs[i]].first == 0){
+                cnt[hs[i]].first = i+1;
+            } else if (cnt[hs[i]].second == 0 && cnt[hs[i]].first != (i+1)) {
+                cnt[hs[i]].second = i+1;
+            } else if(cnt[hs[i]].first > i+1) {
+                cnt[hs[i]].first = i+1;
+            } else if(cnt[hs[i]].second > i+1) {
+                cnt[hs[i]].second = i+1;
+            }
         }
     }
 
     pair<int, int> mini = make_pair(10e9, 10e9);
 
     for(auto& k : cnt) {
-        if(k.second.size() > 1) {
-            pair<int, int> prop = make_pair(*k.second.begin(), *next(k.second.begin()));
-            if(prop < mini) {
-                mini = prop;
-            }
-        }
+        if(k.second.first == 0 || k.second.second == 0) continue;
+        if(k.second < mini) mini = k.second;
     }
 
     if(mini.first == 10e9 && mini.second == 10e9) {
