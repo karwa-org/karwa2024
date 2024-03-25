@@ -10,7 +10,7 @@ uuid: 8ee7605a-4e46-86c4-1552-5b09644130b7
 license: cc by-sa
 rights_owner: author
 # 'default', 'custom', or 'custom interactive'
-validation: default
+validation: custom
 
 # One or more of:
 # case_sensitive
