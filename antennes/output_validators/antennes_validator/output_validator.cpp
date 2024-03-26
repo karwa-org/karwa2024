@@ -39,12 +39,13 @@ signed main(int argc, char *argv[]) {
     for(int i = 0; i < n; i++) {
         int tot = v.read_integer("answer", 1, 10e9);
         if(poss[def[i]].empty()) {
-            v.WA("Invalid value empty in set searching for :", tot, " and ", i, " and ", def[i]);
+            v.WA("Invalid value empty in set searching for :", tot, " at ", i);
         }
         if(poss[def[i]].find(tot) == poss[def[i]].end()) {
 
-            v.WA("Invalid value not found got ", tot, " and ", i);
+            v.WA("Invalid value not found got ", tot, " at ", i);
         }
+
         poss[def[i]].erase(poss[def[i]].find(tot));
         v.newline();
     }
