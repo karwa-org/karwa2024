@@ -38,4 +38,5 @@ bt run
 
 ### Easy
 - Meurtrier
+- Antennes
 - Tomates
