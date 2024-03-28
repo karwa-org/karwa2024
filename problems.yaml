@@ -54,3 +54,9 @@
     fr: Antennes en pagailles
   rgb: '#000000'
   time_limit: 1.0
+- id: hubs
+  label: K
+  name:
+    fr: Hubs en folie
+  rgb: '#000000'
+  time_limit: 1.0
