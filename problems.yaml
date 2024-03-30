@@ -42,21 +42,21 @@
     fr: Tomates
   rgb: '#000000'
   time_limit: 1.0
-- id: carre
-  label: I
-  name:
-    en: carre
-  rgb: '#000000'
-  time_limit: 1.0
 - id: antennes
-  label: J
+  label: I
   name:
     fr: Antennes en pagailles
   rgb: '#000000'
   time_limit: 1.0
 - id: hubs
-  label: K
+  label: J
   name:
     fr: Hubs en folie
+  rgb: '#000000'
+  time_limit: 1.0
+- id: rollercoaster
+  label: K
+  name:
+    en: rollercoaster
   rgb: '#000000'
   time_limit: 1.0
