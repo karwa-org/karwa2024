@@ -29,14 +29,17 @@ bt run
 ### Hard
 - Bombe
 - 24H vélo
+- Hubs
 
 ### Medium
 - Flot
 - SNCB
 - Ping-pong
 - Pairmutation
+- Hub
 
 ### Easy
 - Meurtrier
 - Antennes
+- Rollercoaster
 - Tomates
