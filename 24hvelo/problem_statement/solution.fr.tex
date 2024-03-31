@@ -3,20 +3,20 @@
 \begin{frame}
     \frametitle{\problemtitle}
     \begin{block}
-        {Problème} On vous donne $n$ éléments avec un cout de $c_i$ trouvez un sous-ensemble qui somme à $k$.
+        {Problème} On vous donne $n$ éléments avec un coût de $c_i$, trouvez un sous-ensemble qui somme à $k$.
     \end{block}
     \pause
-    \textbf{Solution Naïve}: Tester toutes les sous-ensembles possibles. $\mathcal O(2^n)$ Trop lent ! \\
+    \textbf{Solution Naïve}: Tester toutes les sous-ensembles possibles. $\mathcal{O}(2^n)$ Trop lent ! \\
     \pause
     \textbf{Solution}: DP + bitmask. \\
     \pause
-    
+
     \begin{block}{Bitmask}
-        [1, 2, 3, 4 $\cdots$, n-1, n] $\mapsto$ 0\, 0\, 0\, 0 $\cdots$\, 0\, 0 (0 en binaire ) \\
+        [1, 2, 3, 4 $\cdots$, n-1, n] $\mapsto$ 0\, 0\, 0\, 0 $\cdots$\, 0\, 0 (0 en binaire) \\
         Si le $i$-ème bit est à 1 alors l'élément $i$ est dans le sous-ensemble.
     \end{block}
     \pause
-    \textbf{Exemple}: 3 premiers éléments dans le sous-enssemnle:\\
+    \textbf{Exemple}: 3 premiers éléments dans le sous-ensemble:\\
     \begin{align*}
         1\, 1\, 1\, 0 \cdots\, 0\, 0
     \end{align*}
@@ -24,7 +24,7 @@
 \end{frame}
 \begin{frame}
     \frametitle{\problemtitle}
-    \textbf{DP}: Si on ajoute l'élément $i$ à notre sous enssemble alors on regarde quel sous-enssemble somme à $j-c_i$. à l'éllément i-1.
+    \textbf{DP}: Si on ajoute l'élément $i$ à notre sous-ensemble alors on regarde quel sous-ensemble somme à $j-c_i$ à l'élément $i-1$.
     
     \begin{align*}
         DP[i][j] = DP[i-1][j] \,|\, DP[i-1][j-c_i]
@@ -40,5 +40,5 @@
       \end{tabular}
     \end{table}
     
-    Complexitée totale: $\mathcal O(n \cdot k)$
+    Complexité totale: $\mathcal{O}(n \cdot k)$
 \end{frame}
