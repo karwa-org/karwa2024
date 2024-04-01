@@ -29,6 +29,7 @@ bt run
 ### Hard
 - Bombe
 - 24H vélo
+- Espion
 - Hubs
 
 ### Medium
