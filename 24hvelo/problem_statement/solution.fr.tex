@@ -8,19 +8,9 @@
     \pause
     \textbf{Solution Naïve}: Tester toutes les sous-ensembles possibles. $\mathcal O(2^n)$ Trop lent ! \\
     \pause
-    \textbf{Solution}: DP + bitmask. \\
+    \textbf{Solution}: DP. \\
     \pause
     
-    \begin{block}{Bitmask}
-        [1, 2, 3, 4 $\cdots$, n-1, n] $\mapsto$ 0\, 0\, 0\, 0 $\cdots$\, 0\, 0 (0 en binaire ) \\
-        Si le $i$-ème bit est à 1 alors l'élément $i$ est dans le sous-ensemble.
-    \end{block}
-    \pause
-    \textbf{Exemple}: 3 premiers éléments dans le sous-enssemnle:\\
-    \begin{align*}
-        1\, 1\, 1\, 0 \cdots\, 0\, 0
-    \end{align*}
-    \pause
 \end{frame}
 \begin{frame}
     \frametitle{\problemtitle}
