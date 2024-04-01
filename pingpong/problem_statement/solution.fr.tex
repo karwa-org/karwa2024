@@ -1,12 +1,12 @@
 \begin{frame}
     \frametitle{\problemtitle}
         \begin{block}
-            {Problème} maximiser le nombre de verres à boire étant donné une balle qui rebondis tout les $x$ mètres.
+            {Problème:} Maximiser le nombre de verres à boire étant donné une balle qui rebondit tous les $x$ mètres.
         \end{block}
         \pause
-        \textbf{Solution Naïve}: Pour chaque rebonds tester si le verre $a_i$ est accesible. $\mathcal O(n^2)$ Trop lent !\\
+        \textbf{Solution Naïve}: Pour chaque rebond, tester si le verre $a_i$ est accesible. $\mathcal O(n^2)$ Trop lent !\\
         \pause
-        \textbf{Solution}: Simuler chaque rebonds de manière intélligente, Pour un rebond $k$ on ittère à travers tout ses multiples. \\
+        \textbf{Solution}: Simuler chaque rebond de manière intelligente, pour un rebond $k$ on itère à travers tous ses multiples. \\
         \pause
         \begin{align}
             &\Rightarrow \sum_{i=1}^{n} \frac{n}{i}\\
@@ -15,3 +15,4 @@
         $\Rightarrow$ ce qui mène à une complexité de $\mathcal O(n \cdot log n)$
 
 \end{frame}
+

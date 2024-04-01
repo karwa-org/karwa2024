@@ -36,7 +36,6 @@ bt run
 - SNCB
 - Ping-pong
 - Pairmutation
-- Hub
 
 ### Easy
 - Meurtrier

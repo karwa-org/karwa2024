@@ -1,7 +1,7 @@
 \begin{frame}
     \frametitle{\problemtitle}
         \begin{block}
-            {Problème} Trouver deux lignes qui sont identiques en éffectuant des rotations sur les lignes.
+            {Problème} Trouver deux lignes qui sont identiques en effectuant des rotations sur les lignes.
         \end{block}
         \pause
         \textbf{Solution Naïve}: Pour chaque ligne, tester si une des autres lignes est identique après une rotation. $\mathcal O(n^2 \cdot m^2)$ Trop lent !\\
@@ -16,18 +16,18 @@
         Il suffit de retirer le dernier caractère et de le mettre au début.
         \pause
         \begin{align*}
-           &\rightarrow (b \cdot A^0 + o \cdot A^1 + n \cdot A^2 + j \cdot A^3 + o \cdot A^4 + u \cdot A^5 + r \cdot A^6) \, mod \, B \,\text{(Inital)}\\ 
+           &\rightarrow (b \cdot A^0 + o \cdot A^1 + n \cdot A^2 + j \cdot A^3 + o \cdot A^4 + u \cdot A^5 + r \cdot A^6) \, mod \, B \,\text{(Inital)}\\
            &\rightarrow A \cdot (b \cdot A^0 + o \cdot A^1 + n \cdot A^2 + j \cdot A^3 + o \cdot A^4 + u \cdot A^5) \, mod \, B\, \text{(On retire le dernier et multiplie par A)}\\
-           &\rightarrow (r \cdot A^0 + b \cdot A^1 + o \cdot A^2 + n \cdot A^3 + j \cdot A^4 + o \cdot A^5 + u \cdot A^6) \, mod \, B\, \text{(On remet au début celui qu'on a retiré)}\\ 
+           &\rightarrow (r \cdot A^0 + b \cdot A^1 + o \cdot A^2 + n \cdot A^3 + j \cdot A^4 + o \cdot A^5 + u \cdot A^6) \, mod \, B\, \text{(On remet au début celui qu'on a retiré)}\\
         \end{align*}
         \pause
 \end{frame}
 \begin{frame}
     \frametitle{\problemtitle}
         \begin{block}
-            {Problème} Trouver deux lignes qui sont identiques en éffectuant des rotations sur les lignes.
+            {Problème} Trouver deux lignes qui sont identiques en effectuant des rotations sur les lignes.
         \end{block}
-    Suffit donc de garder dans un dictionaire les hash et voir si deux hash sont identiques.\\
+    Suffit donc de garder dans un dictionnaire les hash et voir si deux hash sont identiques.\\
     \textbf{ATTENTION:} Choisir un bon $B$ pour éviter les collisions. (ici $B$ $\approx$ $2^{50}$ suffit)\\
     \pause
     Complexité: $\mathcal O(n \cdot m)$

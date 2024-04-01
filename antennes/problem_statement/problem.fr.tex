@@ -6,23 +6,23 @@
 }
 
 % TODO: Remove this comment when you're done writing the problem statement.
-La Komission des Antennes Régionnale Wallone à besoin de vous ! En effet, le gouvernement à investit dans énorméments de nouveaux batiments partout en Wallonie. Bien évidemment nous sommes en 2024 et ces batiments ont besoin d'avoir une connexion internet fiable !
+La Komission des Antennes Régionnale Wallone (KARWa) a besoin de vous ! En effet, le gouvernement a investi dans énormément de nouveaux bâtiments partout en Wallonie. Bien évidemment, nous sommes en 2024 et ces bâtiments ont un besoin d'une connexion internet fiable !
 
-Pour ce faire la Komission à acheté des antennes à mettre sur les bâtiments. Seulement il y en a des meilleurs que d'autres... Ainsi, la Komission fait appel à vous afin de savoir où mettre quelle antenne afin d'avoir la meilleure couverture possible.
+Pour ce faire, la Komission a acheté des antennes à mettre sur les bâtiments. Seulement, il y en a des meilleurs que d'autres... Ainsi, la Komission fait appel à vous afin de savoir où mettre quelle antenne pour avoir la meilleure couverture possible.
 
 Pour réaliser cela, vous recevez une liste avec la position de chaque bâtiment ainsi que son besoin de connectivité avec la liste des antennes à placer et la connectivité qu'elles peuvent procurer.
 
-Afin de vous simplifier la tâche, votre superviseur vous dit qu'il est suffisant de maximiser le produit entre la connectivité offerte par l'antenne et le besoin du bâtiment. Par exemple un bâtiment ayant un besoin de \(100\) possèdant une antenne offrant une connectivité de \(33\) aura un \textit{score} de \(3300\), une antenne offrant \(42\) de connectivité sera donc préférable. Il vous demande donc quel \textit{score} maximal vous pouvez obtenir pour chaque bâtiment
+Pour vous simplifier la tâche, votre superviseur vous dit qu'il est suffisant de maximiser la somme des produits entre la connectivité offerte par chaque antenne avec le besoin du bâtiment qui lui est reliée. Par exemple, un bâtiment ayant un besoin de $100$ et possédant une antenne offrant une connectivité de $33$ aura un \emph{score} de $3300$. Il vous demande donc quel \emph{score} vous pouvez obtenir pour chaque bâtiment dans le but que la somme de tous les scores soient la plus grande possible. Notez qu'une antenne ne peut être utilisée qu'une seule fois.
 
 \begin{Input}
     L'entrée consiste en :
     \begin{itemize}
-        \item Une ligne avec un entier \(N\) (\(1 < N \leq 1000\)), le nombre de bâtiment ainsi que le nombre d'antennes.
-      \item \(N\) lignes où la ligne \(N_{i}\) correspond au bâtiment \(i\) contenant 1 entiers \(b\), le besoin de connectivité nécessaire au dit bâtiment. Avec \(1 \leq b \leq 1000\)
-      \item Encore \(N\) lignes où la ligne \(N_{j}\) correspond à l'antenne \(j\) et contient un seul entier \(c\), la connectivité offerte par l'antenne. Avec \(1 \leq c \leq 1000\)
+      \item une ligne avec un entier $n$ ($1 < N \leq 1000$), le nombre de bâtiments ainsi que le nombre d'antennes,
+      \item $n$ lignes, chacune contenant un entier $b_i$ ($1 \leq b \leq 1000$), le besoin de connectivité nécessaire au bâtiment $i$,
+      \item $n$ lignes, chacune contenant un entier $c_i$ ($1 \leq c_i \leq 1000)$, la connectivité offerte par l'antenne $i$.
     \end{itemize}
 \end{Input}
 
 \begin{Output}
-  \(N\) lignes, où la ligne \(N_{i}\) contient 1 entier, \(s\), le \textit{score} maximum qu'aura le bâtiment \(i\)
+  $n$ lignes, où la ligne $i$-ème ligne contient un entier $s$, le \emph{score} qu'aura le bâtiment $i$ dans une configuration optimale.
 \end{Output}
