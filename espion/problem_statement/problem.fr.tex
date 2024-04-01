@@ -5,19 +5,19 @@
     CC BY-SA 4.0 by Rizki Aditya Majid on \href{https://www.vecteezy.com/vector-art/35771070-crime-boss-woman-holding-dual-gun}{vecteezy}
 }
 
-Vous êtes un agent inflitrée dans une organisation criminelle, En effet un célèbre bandit nomé \textit{John Windows} à capturé les membres du \textit{Louvain-Li-Nux}. Pour ce faire vous vous êtes infliré dans l'endroit où ils sont capturés. Vous avez réussi à les libérer mais vous devez vous échapper avant que les gardes ne vous attrapent.  Vous avez $t$ secondes pour vous échapper avant d'être attrapé.
+Vous êtes un agent infiltré dans une organisation criminelle. En effet, un célèbre bandit nommé \textit{John Windows} a capturé les membres du \textit{Louvain-Li-Nux}. Pour ce faire, vous vous êtes infiltré dans l'endroit où ils sont capturés. Vous avez réussi à les libérer, mais vous devez vous échapper avant que les gardes ne vous attrapent.  Vous avez $t$ secondes pour vous échapper avant d'être attrapé.
 
-Cependant sur le chemin de la sortie se trouve $n$ gardes. Vous avez le choix entre les neutraliser ou les éviter. Vous possedez deux armes, un pistolet et un couteau. Le pistolet prends $p_i$ temps pour neutraliser le guarde $i$, le couteau prends $c_i$ temps pour neutraliser le guarde $i$ et l'equiver prends $e_i$ temps pour neutrealiser le guarde $i$. Attention vous ne pouvez pas utilise deux fois la même arme à la suite !.
+Cependant, sur le chemin de la sortie se trouvent $n$ gardes. Vous avez le choix entre les neutraliser ou les éviter. Vous possédez deux armes, un pistolet et un couteau. Le pistolet prend $p_i$ secondes pour neutraliser le garde $i$, le couteau prend $c_i$ secondes pour neutraliser le garde $i$ et esquiver le garde $i$ prend $e_i$ secondes. Attention, vous ne pouvez pas utiliser deux fois la même arme à la suite !
 
-Dès lors vous voulez savoir le nombre ($x$) maximum de garde que vous pouvez neutraliser avant de vous échapper ainsi que le temps minimum qu'il vous faut pour échaper les $x$ guardes.
+Dès lors, vous voulez savoir le nombre ($x$) maximum de garde que vous pouvez neutraliser avant de vous échapper ainsi que le temps minimum qu'il vous faut pour échapper les $x$ gardes.
 \begin{Input}
     L'entrée consiste en:
     \begin{itemize}
-        \item une ligne avec deux entiers $n$ ($1\leq n \leq 5 \cdot 10^5$), le nombre de garde et $t$ ($1\leq t \leq 10^9$), le temps que vous avez pour vous échapper.
-        \item $n$ lignes avec trois entiers  $p_i$ ($1\leq p_i \leq 10^9$), $c_i$ ($1\leq c_i \leq 10^9$) et $e_i$ ($1\leq e_i \leq 10^9$), le temps que prends chaque arme pour neutraliser le garde $i$.
+        \item une ligne avec deux entiers $n$ et $t$ ($1\leq n \leq 5 \cdot 10^5$, $1\leq t \leq 10^9$), le nombre de gardes et le temps que vous avez pour vous échapper.
+        \item $n$ lignes, la $i$-ème ligne contenant trois entiers  $p_i$, $c_i$ et $e_i$ ($1\leq p_i, c_i, e_i \leq 10^9$), le temps que prend chaque arme pour neutraliser le garde $i$.
     \end{itemize}
 \end{Input}
 
 \begin{Output}
-    Sortez un entier $x$, le nombre de garde que vous pouvez neutraliser avant de vous échapper et un entier $m$ le temps minimum qu'il vous faut pour échaper les $x$ guardes.
+    Sortez un entier $x$, le nombre de gardes que vous pouvez neutraliser avant de vous échapper et un entier $m$ le temps minimum qu'il vous faut pour échapper les $x$ gardes.
 \end{Output}
