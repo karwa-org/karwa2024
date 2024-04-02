@@ -9,17 +9,17 @@ int main(int argc, char *argv[]) {
     int n = v.read_integer("n", 1, 1000000);
     v.newline();
     for (int i = 0; i < n; i++) {
-        int a = v.read_integer("a", 1, 1000000000);
+        int a = v.read_integer("a", 0, 1000000000);
         v.space();
-        int b = v.read_integer("b", 1, 1000000000);
+        int b = v.read_integer("b", 0, 1000000000);
         v.newline();
     }
     int m = v.read_integer("m", 1, 1000000);
     v.newline();
     for (int i = 0; i < m; i++) {
-        int x = v.read_integer("x", 1, 1000000000);
+        int x = v.read_integer("x", 0, 1000000000);
         v.space();
-        int y = v.read_integer("y", 1, 1000000000);
+        int y = v.read_integer("y", 0, 1000000000);
         v.newline();
     }
 

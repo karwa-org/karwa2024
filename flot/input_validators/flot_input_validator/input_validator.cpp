@@ -22,7 +22,9 @@ int main(int argc, char *argv[]) {
     v.newline();
     for(int i = 0; i < s; i++) {
         v.read_integer("s", 1, 100000);
-        v.space();
+        if(i < s-1) {
+            v.space();
+        }
     }
     v.newline();
 
@@ -30,7 +32,9 @@ int main(int argc, char *argv[]) {
     v.newline();
     for(int i = 0; i < s; i++) {
         v.read_integer("e", 1, 100000);
-        v.space();
+        if(i < s-1) {
+            v.space();
+        }
     }
     v.newline();
 }
