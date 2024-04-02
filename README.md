@@ -79,5 +79,5 @@ For resolver at the end, run:
 
 To export stats of submissions and make `\solvestats` available in solutions tex files, run:
 ```console
-bt solve_stats --api <domjudgeURL> --username <admin> --password <pwd>
+bt solve_stats --api <domjudge URL> --username <admin> --password <pwd> (--contest-id 1) (--post-freeze)
 ```

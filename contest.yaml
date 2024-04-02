@@ -12,9 +12,9 @@ scoreboard_freeze_duration: 1:00:00
 
 # Latex fields:
 title: KARWa 2024
-subtitle: 
+subtitle: Konkours d'algorithmique régionale Wallone
 year: 2024
-author: Jury
+author: The KARWa 2023 jury
 testsession: False
 blank_page_text:
 print_timelimit: true
@@ -22,10 +22,10 @@ print_timelimit: true
 # problem.yaml defaults
 source_url: 
 license: cc by-sa
-rights_owner: author
+rights_owner: Louvain-li-Nux && CPUMons
 
 # CCS fields for integration
 # URL endpoint of the CCS, e.g. https://www.domjudge.org/demoweb.
-#api:
+api: https://domjudge.kapucl.be
 # Contest ID in the CCS; only needed in case of multiple active contests.
 #contest_id:

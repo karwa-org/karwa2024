@@ -5,27 +5,27 @@
   time_limit: 1.0
 - id: bombe
   label: B
-  name: bombe
+  name: Bombe
   rgb: '#92d76d'
   time_limit: 1.0
 - id: meurtrier
-  label: C
+  label: M
   name: Meurtrier
   rgb: '#8ac561'
   time_limit: 1.0
 - id: 24hvelo
   label: D
-  name: 24h velo
+  name: 24h vélo
   rgb: '#83f5bf'
   time_limit: 1.0
 - id: espion
   label: E
-  name: espion
+  name: Espion
   rgb: '#d95867'
   time_limit: 1.0
 - id: flot
   label: F
-  name: flot
+  name: Flot
   rgb: '#4b146b'
   time_limit: 1.0
 - id: pairmutation
@@ -40,21 +40,21 @@
   time_limit: 1.0
 - id: pingpong
   label: I
-  name: PingPong
+  name: Ping Pong
   rgb: '#c1d600'
   time_limit: 1.0
 - id: rollercoaster
   label: J
-  name: rollercoaster
+  name: Roller coaster
   rgb: '#be7866'
   time_limit: 1.0
 - id: sncb
   label: K
-  name: SNCB
+  name: Kilomètres À Rallonge, Wagons en Avarie
   rgb: '#e96ba5'
   time_limit: 2.0
 - id: tomates
   label: L
-  name: Tomates
+  name: Litige à tomates
   rgb: '#d33d09'
   time_limit: 1.0
