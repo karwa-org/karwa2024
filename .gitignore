@@ -2,3 +2,5 @@
 /.envrc
 /BAPCtools/
 /bt.sh
+/tonnelle/ans.py
+/tonnelle/test_case.py

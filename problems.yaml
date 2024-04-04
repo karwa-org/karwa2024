@@ -42,12 +42,6 @@
     fr: Tomates
   rgb: '#000000'
   time_limit: 1.0
-- id: carre
-  label: I
-  name:
-    en: carre
-  rgb: '#000000'
-  time_limit: 1.0
 - id: antennes
   label: J
   name:
@@ -58,5 +52,11 @@
   label: K
   name:
     fr: Hubs en folie
+  rgb: '#000000'
+  time_limit: 1.0
+- id: tonnelle
+  label: L
+  name:
+    en: tonnelle
   rgb: '#000000'
   time_limit: 1.0
