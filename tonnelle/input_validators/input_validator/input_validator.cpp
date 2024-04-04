@@ -6,7 +6,7 @@
 
 int main(int argc, char *argv[]) {
     InputValidator v(argc, argv);
-    int n = v.read_integer("n", 4, 1000000);
+    int n = v.read_integer("n", 4, 10000);
     v.newline();
     for (int i = 0; i < n; i++) {
         int x = v.read_integer("x", -500, 500);
