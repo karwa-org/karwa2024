@@ -1,4 +1,4 @@
-name: {'fr': 'flot'}
+name: {'fr': 'Flot'}
 author: Alexis Englebert 
 # Contest name and year
 source: KARWa
@@ -8,7 +8,7 @@ license: cc by-sa
 rights_owner: author
 # 'default', 'custom', or 'custom interactive'
 validation: custom
-
+uuid: F
 # One or more of:
 # case_sensitive
 # space_change_sensitive
@@ -23,3 +23,4 @@ limits:
   time_multiplier: 2
   # Warning for submissions within 50% of time limit
   time_safety_margin: 1.5
+

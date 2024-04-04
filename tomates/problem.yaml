@@ -1,5 +1,5 @@
 name:
-  fr: Tomates
+  fr: Litige à tomates
 author: Christophe Grandmont
 # Contest name and year
 source: KARWa
@@ -9,7 +9,7 @@ license: mit
 rights_owner: Louvain-li-Nux && CPUMons
 # 'default', 'custom', or 'custom interactive'
 validation: default
-uuid: Tomates
+uuid: L
 
 # One or more of:
 # space_change_sensitive

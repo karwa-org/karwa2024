@@ -4,20 +4,20 @@
 \newcommand{\maxn}{64}
 
 \illustration{0.3}{image.jpg}{
-    Légende de l'illustration
+
 }
-Après les 24h vélo, Alexandre fait ses comptes. Malheureusement, il ne se souvient plus de ce qu'il a acheté car il a perdu ses tickets de caisse. Heureusement, il se rappelle des prix des objets et du montant total qu'il a payé. Pouvez-vous retrouver quels objets il a achetés uniquement avec le montant total ? S'il n'existe aucune solution, retournez -1. Il est garanti que les objets sont uniques, et il n'est pas possible qu'Alexandre ait acheté plusieurs fois le même objet. \\
+Après les 24h vélo, Alexandre fait ses comptes. Malheureusement, il ne se souvient plus de ce qu'il a acheté car il a perdu ses tickets de caisse. Heureusement, il se rappelle des prix des objets et du montant total qu'il a payé. Pouvez-vous retrouver quels objets il a achetés uniquement avec le montant total ? S'il n'existe aucune solution, retournez \texttt{-1}. Il est garanti que les objets sont uniques, et il n'est pas possible qu'Alexandre ait acheté plusieurs fois le même objet. \\
 S'il existe plusieurs solutions, affichez-en une.
 
 \begin{Input}
     L'entrée consiste en :
     \begin{itemize}
-        \item Une ligne avec deux entiers $n, k$ ($0 \leq n \leq \maxn$), $(0 \leq k \leq \maxk)$ représentant le nombre d'objets et le montant total.
-        \item Une ligne avec $n$ objets. Chaque objet a un nom d'au plus $10^4$ caractères sans espaces et un prix $p$ qui est un entier. $(0 \leq p \leq \maxk)$
+        \item une ligne avec deux entiers $n$ et $k$ ($0 \leq n \leq \maxn$, $0 \leq k \leq \maxk)$ représentant le nombre d'objets et le montant total payé,
+        \item $n$ lignes, chacune contenant $s$ et $p$, où $s$ est une chaîne de caractères de longueur au plus $10^4$ donnant le nom d'un objet et $p$ est son prix $(0 \leq p \leq \maxk)$.
     \end{itemize}
-    Il est garantis que la somme des prix des objets est d'au plus $\maxk$.
+    Il est garanti que la somme des prix des objets est d'au plus $\maxk$.
 \end{Input}
 
 \begin{Output}
-    Sortez le nombre d'objets qu'Alexandre a achetés suivis des noms des objets. Sortez $-1$ s'il n'y a aucun objet correspondant au montant total.
+    Sortez le nombre $m$ d'objets qu'Alexandre a achetés, suivi de $m$ lignes, chacune avec le nom d'un objet. Sortez \texttt{-1} s'il n'y a aucun objet correspondant au montant total.
 \end{Output}

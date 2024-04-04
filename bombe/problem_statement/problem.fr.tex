@@ -24,13 +24,13 @@ Votre but est de trouver deux lignes qui sont égales après avoir entré une s�
 \begin{Input}
     L'entrée consiste en :
     \begin{itemize}
-        \item Une ligne avec deux entiers $n$ ($0\leq n \leq 10000$), le nombre de lignes dans la grille, $m$ ($0 \leq m \leq 10000$), le nombre de colonnes dans la grille.
-        \item $n$ lignes avec $m$ caractères $a_{i,j}$, la couleur de la cellule $(i,j)$.
+        \item une ligne avec deux entiers $n$ et $m$ ($0\leq n,m \leq 10^4$), respectivement le nombre de lignes et le nombre de colonnes dans la grille,
+        \item $n$ lignes, chacune contenant une chaîne de caractère de longueur $m$, le $j$-ème caractère de la $i$-ème ligne est $a_{i,j}$, la couleur de la cellule $(i,j)$.
     \end{itemize}
-    Il est garantis que $a_{i,j}$ est une lettre de l'alphabet \textbf{majuscule OU minuscule}.\\
-    Il est aussi garantis que $n \cdot m \leq 50000$
+    Il est garanti que $a_{i,j}$ est une lettre de l'alphabet \textbf{majuscule OU minuscule}.\\
+    Il est aussi garanti que $n \cdot m \leq 50000$
 \end{Input}
 
 \begin{Output}
-    L'indice des deux lignes dans l'ordre croissant qui sont égales. Si plusieurs lignes correspondent, affichez la paire de lignes la plus petite. S'il n'est pas possible de trouver deux lignes qui sont égales, sortez \texttt{BOOM!}.
+    L'indice des deux lignes dans l'ordre croissant qui sont égales. Si plusieurs lignes correspondent, affichez la paire ayant le plus petit numéro de ligne, et si ce plus petit numéro est identique pour deux paires, regardez prenez la paire avec le plus petit deuxième numéro. S'il n'est pas possible de trouver deux lignes qui sont égales, sortez \texttt{BOOM!}.
 \end{Output}

@@ -1,58 +1,62 @@
-- id: 24hvelo
+- id: antennes
   label: A
-  name: 24h velo
-  rgb: '#1000000'
-  time_limit: 1.0
-- id: meurtrier
-  label: B
-  name: Meurtrier
-  rgb: '#001000'
-  time_limit: 1.0
-- id: flot
-  label: C
-  name: {fr: flot}
-  rgb: '#000000'
-  time_limit: 1.0
-- id: pingpong
-  label: D
-  name:
-    fr: PingPong
-  rgb: '#000000'
-  time_limit: 1.0
-- id: pairmutation
-  label: E
-  name: {fr: Pairmutation}
-  rgb: '#001000'
+  name: Antennes en pagailles
+  rgb: '#a953c2'
   time_limit: 1.0
 - id: bombe
+  label: B
+  name: Bombe
+  rgb: '#92d76d'
+  time_limit: 1.0
+- id: meurtrier
+  label: M
+  name: Meurtrier
+  rgb: '#8ac561'
+  time_limit: 1.0
+- id: 24hvelo
+  label: D
+  name: 24h vélo
+  rgb: '#83f5bf'
+  time_limit: 1.0
+- id: espion
+  label: E
+  name: Espion
+  rgb: '#d95867'
+  time_limit: 1.0
+- id: flot
   label: F
-  name:
-    fr: bombe
-  rgb: '#000000'
+  name: Flot
+  rgb: '#4b146b'
   time_limit: 1.0
-- id: sncb
+- id: pairmutation
   label: G
-  name:
-    fr: SNCB
-  rgb: '#000000'
-  time_limit: 2.0
-- id: tomates
-  label: H
-  name:
-    fr: Tomates
-  rgb: '#000000'
-  time_limit: 1.0
-- id: antennes
-  label: J
-  name:
-    fr: Antennes en pagailles
-  rgb: '#000000'
+  name: Pairmutation
+  rgb: '#524bf0'
   time_limit: 1.0
 - id: hubs
+  label: H
+  name: Hubs en folie
+  rgb: '#26cd8c'
+  time_limit: 1.0
+- id: pingpong
+  label: I
+  name: Ping Pong
+  rgb: '#c1d600'
+  time_limit: 1.0
+- id: rollercoaster
+  label: J
+  name: Roller coaster
+  rgb: '#be7866'
+  time_limit: 1.0
+- id: sncb
   label: K
-  name:
-    fr: Hubs en folie
-  rgb: '#000000'
+  name: Kilomètres À Rallonge, Wagons en Avarie
+  rgb: '#e96ba5'
+  time_limit: 2.0
+- id: tomates
+  label: L
+  name: Litige à tomates
+  rgb: '#d33d09'
   time_limit: 1.0
 - id: tonnelle
   label: L

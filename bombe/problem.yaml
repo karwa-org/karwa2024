@@ -1,5 +1,5 @@
 name:
-  fr: bombe
+  fr: Bombe
 author: Alexis Englebert
 # Contest name and year
 source: KARWa
@@ -9,6 +9,7 @@ license: cc by-sa
 rights_owner: author
 # 'default', 'custom', or 'custom interactive'
 validation: custom
+uuid: B
 
 # One or more of:
 # case_sensitive

@@ -1,5 +1,5 @@
 name:
-  fr: 24h velo
+  fr: 24h vélo
 author: Alexis Englebert
 # Contest name and year
 source:
@@ -9,6 +9,7 @@ license: cc by-sa
 rights_owner: author
 # 'default', 'custom', or 'custom interactive'
 validation: custom
+uuid: D
 
 # One or more of:
 # case_sensitive

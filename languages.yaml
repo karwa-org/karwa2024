@@ -236,14 +236,14 @@ prolog:
 python2:
     name: 'Python 2'
     priority: 900
-    files: '*.py *.py2'
+    files: ' *.py2'
     compile: 'pypy -m py_compile {files}'
     run: 'pypy {mainfile}'
 
 python3:
     name: 'Python 3'
     priority: 901
-    files: '*.py3'
+    files: '*.py3 *.py'
     compile: 'pypy3 -m py_compile {files}'
     run: 'pypy3 {mainfile}'
 
