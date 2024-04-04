@@ -8,9 +8,9 @@
   name: Bombe
   rgb: '#92d76d'
   time_limit: 1.0
-- id: meurtrier
-  label: M
-  name: Meurtrier
+- id: tonnelle
+  label: C
+  name: Tonnelle
   rgb: '#8ac561'
   time_limit: 1.0
 - id: 24hvelo
@@ -58,9 +58,8 @@
   name: Litige à tomates
   rgb: '#d33d09'
   time_limit: 1.0
-- id: tonnelle
-  label: C
-  name:
-    en: tonnelle
-  rgb: '#000000'
+- id: meurtrier
+  label: M
+  name: Meurtrier
+  rgb: '#ffa500'
   time_limit: 1.0

@@ -1,27 +1,6 @@
 #!/usr/bin/env python3
 import math
 
-def convex_hull(points):
-    def ccw(o, a, b):
-        return (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0])
-
-    # find lowestleftmost point
-    lowest = points[0]
-    for p in points:
-        if p[1] < lowest[1] or (p[1] == lowest[1] and p[0] < lowest[0]):
-            lowest = p
-
-    # sort by polar angle
-    points.sort(key=lambda p: math.atan2(p[1], p[0]))
-
-    stack = []
-    for p in points:
-        while len(stack) >= 2 and ccw(stack[-2], stack[-1], p) <= 0:
-            stack.pop()
-        stack.append(p)
-
-    return stack
-
 def projection(point_to_project, point1, point2):
     x1, y1 = point1
     x2, y2 = point2

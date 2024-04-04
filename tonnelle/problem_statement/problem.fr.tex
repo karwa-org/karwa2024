@@ -6,22 +6,22 @@
 %}
 
 % optionally define variables/limits for this problem
-\newcommand{\maxa}{123456789}
+\newcommand{\maxn}{10^6}
 
 % TODO: Remove this comment when you're done writing the problem statement.
 Le KARWa est fini, c'est l'heure des résultats ! Suite à un bulletin météo favorable, les organisateurs ont décidé de faire l'annonce des résultats dehors. Sauf que le temps se gâte... Vite, il faut mettre tout le monde à l'abri, les organisateurs vous demandent de l'aide pour installer une tonnelle qui couvrira tout le monde.
-Ils vous donnent la position de toutes les personnes présentes, éparpillées sur la pelouse. Votre tâche consiste à calculer l'aire que doit faire la toile de la tonnelle afin de couvrir tout le monde. Dans un soucis d'économie, vous devez trouver la plus petite toile rectangulaire possible.
+Ils vous donnent la position de toutes les personnes présentes, éparpillées sur la pelouse. Votre tâche consiste à calculer l'aire que doit faire la toile de la tonnelle afin de couvrir tout le monde. Dans un souci d'économie, vous devez trouver la plus petite toile rectangulaire possible.
 Nous considérerons qu'une personne est couverte par la tonnelle si elle est complètement en dessous ou mise sur un poteau de la tonnelle ou alors sur le bord de la toile.
 
 \begin{Input}
-  L'entrée consite en:
+  L'entrée consiste en:
   \begin{itemize}
-    \item Une ligne avec un seul entier \(n\) (\(4 \leq n \leq 1000000\))
-    \item \(n\) lignes avec 2 entiers, \(x\) et \(y\) (\(-500 \leq x, y \leq 500\))
+    \item une ligne avec un seul entier \(n\) (\(4 \leq n \leq \maxn\)), le nombre de participants,
+    \item \(n\) lignes, chacune contenant deux entiers \(x\) et \(y\) (\(-500 \leq x, y \leq 500\)), les coordonnées de chaque participant.
   \end{itemize}
 \end{Input}
 
 \begin{Output}
-  L'aire de la plus petite tonnelle qui recouvre tout le monde.
+  L'aire de la plus petite tonnelle rectangulaire qui recouvre tout le monde.
   Votre réponse doit avoir une erreur absolue d'au plus $10^{-6}$.
 \end{Output}
