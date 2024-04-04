@@ -1,7 +1,6 @@
 \begin{frame}
     \frametitle{\problemtitle}
     \begin{itemize}
-        % TODO: Remove this comment when you're done writing the solutions.
         \item<+-> \textbf{Problème:} Trouver une permutation $\sigma$ qui maximise $\sum_{i} b_i \times c_{\sigma(i)}$.
         \item<+-> Clairement, itérer sur toutes les permutations est trop long: $\mathcal{O}(n!)$.
         \item<+-> Solution: la valeur maximale est atteinte en associant au bâtiment $i$ ayant le plus grand $b_i$ l'antenne $j$ avec la plus grande connectivité $c_j$. Ensuite, on recommence en ignorant $b_i$ et $c_j$.
