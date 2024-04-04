@@ -59,7 +59,7 @@
   rgb: '#d33d09'
   time_limit: 1.0
 - id: tonnelle
-  label: L
+  label: C
   name:
     en: tonnelle
   rgb: '#000000'
