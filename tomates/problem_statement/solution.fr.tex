@@ -1,7 +1,9 @@
 \begin{frame}
     \frametitle{\problemtitle}
-    \begin{itemize}
-        \item<+-> \textbf{Problème:} Il y a $m \cdot k$ tomates au total et $p$ ont été lancées, donc $m \cdot k - p$ est le nombre de tomates restantes et ainsi $\max\{0, n - (m \cdot k - p)\}$ est la pire note obtenable.
-    \end{itemize}
+    \begin{block}{Problème}
+        Étant donné $m \cdot k$ tomates au total et $p$ ayant déjà été lancées, combien peut-on en recevoir au plus ?
+    \end{block}
+    \pause
+    Le nombre de tomates restantes est $m \cdot k - p$, on démarre à $n$ point. Ainsi, $\max\{0, n - (m \cdot k - p)\}$ est la pire note obtenable.
     %\solvestats
 \end{frame}

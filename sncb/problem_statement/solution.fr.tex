@@ -1,42 +1,68 @@
+\usetikzlibrary{overlay-beamer-styles}
+
 \begin{frame}
     \frametitle{\problemtitle}
+     \begin{block}{Problème}
+        Min-Max dans un graphe avec des poids de $1$ sur chaque arête (Théorie des jeux : résoudre un jeu d'accessibilité (quantitative) à somme nulle et à information parfaite $\rightsquigarrow$ Attracteur).
+    \end{block}
+    Plusieurs approches possibles ! En voici une.
+    \pause
     \begin{itemize}
-        \item<+-> \textbf{Problème:} Accessibilité (quantitative) dans un jeu sur graphe, à somme nulle et à deux joueurs !
-        \item<+-> On a un graphe dirigé $(V,E)$, sommets $V_1$ représentant les gares dont le passager n'a aucun contrôle et $V_0$ les autres. On veut calculer en combien de coût, on peut atteindre la destination si on joue optimalement et que l'adversaire joue également optimalement pour nous retarder au maximum.
+       \item<+-> On a un graphe dirigé $(V,E)$ avec $V_0$ les sommets qu'on contrôle et $V_1$ les sommets qu'on ne contrôle pas.
+       \item<+-> Donner une valeur $\lambda_0(v)$ à chaque sommet $v \in V$, initialement $\lambda_0(v) = +\infty$ si $v \neq 1$ et $\lambda_0(v) = 0$ (si on démarre à l'arrivée, on a 0 correspondance).
+       \item<+-> Définir pour $k \in \mathbb{N}$ :
+          \begin{align*}
+          \lambda_{k+1}(v)&=\begin{cases}
+              \underset{v'\in\mathsf{succ}(v)}{\min} \lambda_{k}(v')+1 &\text{if } v\in V_0\\
+              \underset{v'\in\mathsf{succ}(v)}{\max} \lambda_{k}(v')+1 &\text{otherwise}.
+          \end{cases}
+          \end{align*}
+          et calculer jusqu'à ce que $\lambda_{k+1} = \lambda_{k}$, puis afficher $\lambda_{k}(0)$ (le mieux qu'on puisse avoir depuis le sommet $0$ quand l'adversaire joue la pire situation pour nous).
+     \end{itemize}
+\end{frame}
 
-        \begin{figure}
-        \centering
-        \begin{tikzpicture}[->,>=stealth,shorten >=1pt,on grid,node distance=2cm,semithick,double distance=1.5pt,scale=0.6,every node/.style={scale=0.6}]
-          \node[circle,draw,minimum size=0mm,inner sep=5pt,label=above:{$+\infty$}]                       (v0)              {$v_0$};
-          \node[rectangle,draw,minimum size=0mm,inner sep=8pt,label=above:{$+\infty$}]                  (v1)[right of=v0] {$v_1$};
-          \node[circle,draw,minimum size=0mm,inner sep=5pt,fill=gray!20,label=above:{$1$}]                (v2)[right of=v1] {$v_2$};
-          \node[rectangle,draw,minimum size=0mm,inner sep=8pt,label=right:{$+\infty$}]                  (v3)[below of=v0] {$v_3$};
-          \node[circle,draw,minimum size=0mm,inner sep=5pt,fill=gray!20,label=above right:{$0$}](v4)[below of=v2] {$T$};
-          \node[circle,draw,minimum size=0mm,inner sep=5pt,fill=gray!20,label=above right:{$3$}]          (v5)[below of=v3] {$v_5$};
-          \node[rectangle,draw,minimum size=0mm,inner sep=8pt,fill=gray!20,label=above:{$2$}]           (v6)[right of=v5] {$v_6$};
-          \node[circle,draw,minimum size=0mm,inner sep=5pt,fill=gray!20,label=right:{$1$}]                (v7)[right of=v6] {$v_7$};
+\begin{frame}
+    \frametitle{\problemtitle}
+     \begin{align*}
+          \lambda_{k+1}(v)&=\begin{cases}
+              \underset{v'\in\mathsf{succ}(v)}{\min} \lambda_{k}(v')+1 &\text{si } v\in V_0\\
+              \underset{v'\in\mathsf{succ}(v)}{\max} \lambda_{k}(v')+1 &\text{sinon}.
+          \end{cases}
+     \end{align*}
+     \pause
 
-          \path (v0) edge  (v1)
-                     edge[bend right=22](v3)
-                (v1) edge               (v3)
-                     edge               (v2)
-                (v2) edge  (v4)
-                (v3) edge[bend right=22](v0)
-                     edge[bend right=22](v5)
-                (v4) edge  (v1)
-                     edge[loop right]   (v4)
-                (v5) edge  (v6)
-                     edge[bend right=22](v3)
-                (v6) edge[bend right=22](v7)
-                     edge               (v4)
-                (v7) edge[bend right=22](v6)
-                     edge  (v4);
+     \begin{figure}
+     \centering
+     \begin{tikzpicture}[->,>=stealth,shorten >=1pt,on grid,node distance=2cm,semithick,double distance=1.5pt,scale=0.6,every node/.style={draw,scale=0.6,minimum size=0mm}]
+      \node[circle,inner sep=5pt,fill=gray!20,fill on=<6->,label=above:{$+\infty$}]                                    (v0)              {$v_0$};
+      \node[rectangle,inner sep=8pt,fill=gray!20,fill on=<6->,label=above:{$+\infty$}]                               (v1)[right of=v0] {$v_4$};
+      \node[circle,inner sep=5pt,fill=gray!20,fill on=<3->,label=above right:{\alt<3->{$1$}{$+\infty$}}]          (v2)[right of=v1] {$v_2$};
+      \node[rectangle,inner sep=8pt,fill=gray!20,fill on=<6->,label=left:{$+\infty$}]                               (v3)[below of=v0] {$v_3$};
+      \node[circle,inner sep=5pt,fill=gray!20,label=above right:{$0$}](v4)[below of=v2] {$v_1$};
+      \node[circle,inner sep=5pt,fill=gray!20,fill on=<5->,label=left:{\alt<5->{$3$}{$+\infty$}}]          (v5)[below of=v3] {$v_5$};
+      \node[rectangle,inner sep=8pt,fill=gray!20,fill on=<4->,label=above:{\alt<4->{$2$}{$+\infty$}}]     (v6)[right of=v5] {$v_6$};
+      \node[circle,inner sep=5pt,fill=gray!20,fill on=<3->,label=above right:{\alt<3->{$1$}{$+\infty$}}]          (v7)[right of=v6] {$v_7$};
 
-        \end{tikzpicture}
-        \end{figure}
+      \path (v0) edge                (v1)
+                 edge[bend right=22] (v3)
+            (v1) edge[background default aspect={semithick},background aspect={ultra thick},aspect on=<6->] (v3)
+                 edge                (v2)
+            (v2) edge[background default aspect={semithick},background aspect={ultra thick},aspect on=<3->] (v4)
+            (v3) edge[bend right=22,background default aspect={semithick},background aspect={ultra thick},aspect on=<6->] (v0)
+                 edge[bend right=22] (v5)
+            (v4) edge                (v1)
+                 edge[loop right]    (v4)
+            (v5) edge[background default aspect={semithick},background aspect={ultra thick},aspect on=<5->] (v6)
+                 edge[bend right=22] (v3)
+            (v6) edge[bend right=22,background default aspect={semithick},background aspect={ultra thick},aspect on=<4->] (v7)
+                 edge                (v4)
+            (v7) edge[bend right=22] (v6)
+                 edge[background default aspect={semithick},background aspect={ultra thick},aspect on=<3->] (v4);
+     \end{tikzpicture}
+     \end{figure}
 
-        \item<+-> Résolvable par un algorithme d'attracteur (peut aussi être vu comme un MIN-MAX): $\mathcal{O}(|V| + |E|)$.
-    \end{itemize}
+     \pause\pause\pause\pause\pause
+     $\rightsquigarrow \mathcal{O}(|V| + |E|)$.
     %\solvestats
 \end{frame}
 
