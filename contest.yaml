@@ -14,7 +14,7 @@ scoreboard_freeze_duration: 1:00:00
 title: KARWa 2024
 subtitle: Konkours d'algorithmique régionale Wallone
 year: 2024
-author: The KARWa 2023 jury
+author: The KARWa 2024 jury
 testsession: False
 blank_page_text:
 print_timelimit: true
