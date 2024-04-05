@@ -11,7 +11,7 @@
 - id: tonnelle
   label: C
   name: Tonnelle
-  rgb: '#8ac561'
+  rgb: '#f67c2f'
   time_limit: 1.0
 - id: 24hvelo
   label: D
