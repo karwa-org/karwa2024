@@ -1,17 +1,17 @@
 \begin{frame}
     \frametitle{\problemtitle}
         \begin{block}
-            {Problème} Il y a $n$ énemis sur votre chemin et $t$ secondes pour s'échapper. Combien d'énemis peut-on neutraliser ?
+            {Problème} Il y a $n$ ennemis sur votre chemin et $t$ secondes pour s'échapper. Combien d'ennemis peut-on neutraliser ?
         \end{block}
         \pause
         \textbf{Solution}: DP \\
         \pause
-        On définit $DP[i][weapon]$ le temps restant en ayant neutralisé $i$ énemis en utilisant l'arme $weapon$.\\
+        On définit $DP[i][weapon]$ le temps restant en ayant neutralisé $i$ ennemis en utilisant l'arme $weapon$.\\
         \pause
-        On obtient donc la magnifique récurrence suivante:\\
+        On obtient donc la magnifique récurrence suivante :\\
         \begin{align*}
             DP[i][0] &= \max(DP[i-1][1] - p_i, DP[i-1][1] - e_i, DP[i-1][0] - e_i)\\
             DP[i][1] &= \max(DP[i-1][0] - c_i, DP[i-1][1] - e_i, DP[i-1][0] - e_i)\\
         \end{align*}
-        Ce qui mène à une complexité de Complexité: $\mathcal O(n)$.
+        Ce qui mène à une complexité en $\mathcal O(n)$.
 \end{frame}

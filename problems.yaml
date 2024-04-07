@@ -7,7 +7,7 @@
   label: B
   name: Bombe
   rgb: '#92d76d'
-  time_limit: 1.0
+  time_limit: 2.0
 - id: tonnelle
   label: C
   name: Tonnelle
@@ -22,7 +22,7 @@
   label: E
   name: Espion
   rgb: '#d95867'
-  time_limit: 1.0
+  time_limit: 2.0
 - id: flot
   label: F
   name: Flot
