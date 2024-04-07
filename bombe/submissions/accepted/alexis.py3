@@ -50,7 +50,7 @@ def solve():
     for k, v in cnt.items():
         if v[0] == 0 or v[1] == 0:
             continue
-        if v[0] < mini[0] or (v[0] == mini[0] and v[1] < mini[1]):
+        if v[0] < mini[0] or ((v[0] == mini[0]) and v[1] < mini[1]) :
             mini = v
 
     if mini[0] == sys.maxsize and mini[1] == sys.maxsize:

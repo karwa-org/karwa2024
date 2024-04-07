@@ -53,8 +53,8 @@ public class alexis {
         }
     }
 
-    static final long MOD = (1L << 40);
-    static final long A = 911382323;
+    static final long MOD = (1L << 60);
+    static final long A = 91138;
 
     static long safeMod(long a, long m) {
         return (a % m + m) % m;

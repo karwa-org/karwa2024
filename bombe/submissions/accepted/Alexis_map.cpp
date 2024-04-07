@@ -12,8 +12,8 @@ using namespace std;
 
 
 //TODO: CHECK IF BAD CONSTANT TO BE FAIR DURING THE CONTEST
-int MOD = (1LL << 40);
-int A = 911382323;
+int MOD = (1LL << 60);
+int A = 91138;
 
 int safeMod(int a, int m) {
     return (a % m + m) % m;
