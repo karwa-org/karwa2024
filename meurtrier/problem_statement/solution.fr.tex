@@ -51,21 +51,13 @@
     \begin{itemize}
         \item<+-> \textbf{Cas 1:} La personne A a vu la personne B.
             \begin{itemize}
-                \item Donc la personne B n'est pas le meurtrier.
+                \item<+-> Donc la personne B n'est pas le meurtrier.
             \end{itemize}
         \item<+-> \textbf{Cas 2:} La personne A n'a pas vu la personne B.
             \begin{itemize}
-                \item Donc la personne B n'est pas le meurtrier.
+                \item<+-> Donc la personne B n'est pas le meurtrier.
             \end{itemize}
-
-        \textbf{Solution} Stratégie de \textbf{Diviser pour régner}:
-        \begin{itemize}
-            \item<+-> On divise notre ensemble de personne en deux.
-            \item<+-> On demande à une personne de chaque groupe si elle a vu une personne de l'autre groupe.
-            \item<+-> On garde les potentiels meurtriers.
-            \item<+-> On répète jusqu'à ce qu'il ne reste que deux personnes.
-        \end{itemize}
-        Au total, $n-1$ opérations. Étant donné qu'à chaque question, on élimine une personne, il nous faut donc $n-1$ questions pour trouver le meurtrier.
     \end{itemize}
+    \textbf{Solution}: On Applique la règle ci-dessus tout en éliminant les suspects petit à petit ce qui nous donne $n-1$ opérations. 
 \end{frame}
 
