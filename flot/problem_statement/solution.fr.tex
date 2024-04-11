@@ -5,16 +5,16 @@
             {Problème} Pour une arrivée donnée, trouver à quelle rivière il faut déposer le bateau. Calculer ça pour toutes les arrivées.
         \end{block}
         \pause
-        \textbf{Solution Naïve}: Faire dijkstra sur chaque arrivée $\mapsto$ Trop lent ! $\mathcal{O}(d \cdot n \cdot log(n) + d \cdot m)$\\
+        \textbf{Solution Naïve} : Faire dijkstra sur chaque arrivée $\mapsto$ Trop lent ! $\mathcal{O}(d \cdot n \cdot log(n) + d \cdot m)$\\
         \pause
         \textbf{Solution}: Faire un multisource 0-5 BFS $\mathcal{O}(n + m)$
 
         \begin{figure}[h]
             \begin{center}
                 \begin{tikzpicture}[>=stealth', shorten >=1pt, auto,
-                    node distance=2.5cm, scale=1, 
+                    node distance=2.5cm, scale=1,
                     transform shape, align=center,]
-        
+
                     \begin{scope}[every node/.style={circle,thick,draw, minimum size=1cm} ]
                         \node (1)[red] at (0,0) {1};
                         \node (2) at (2,1) {2};
@@ -33,7 +33,7 @@
                     (2) edge node {} (4)
                     (3) edge node {} (5)
                     (4) edge node {} (6);
-                    
+
                 \end{tikzpicture}
             \end{center}
         \end{figure}

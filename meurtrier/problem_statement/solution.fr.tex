@@ -1,25 +1,23 @@
+\definecolor{ggreen}{HTML}{30b020}
 
 \begin{frame}
     \frametitle{\problemtitle}
-        \begin{block}
-            {Problème} Trouver qui est le meurtrier parmi $n$ personnes.
-        \end{block}
-        \pause
-        \textbf{Solution Naïve}: Tester toutes les paires possibles. $\mathcal O(n^2)$ Trop d'opérations !
-\end{frame}
-
-\begin{frame}
-    \frametitle{\problemtitle}
+    \begin{block}{Problème}
+        Trouver qui est le meurtrier parmi $n$ personnes.
+    \end{block}
+    \pause
+    \textbf{Solution Naïve}: Tester toutes les paires possibles. $\mathcal O(n^2)$ Trop d'opérations !
+    \pause
     \begin{itemize}
         \item<+-> À la place, on peut voir le problème comme un graphe.
-        \item<+-> \textbf{Graphe:} Ensemble de sommets (personnes) reliés par des lignes (A a vu B).
-            \\
+        \item<+-> \textbf{Graphe :} Ensemble de sommets (personnes) reliés par des lignes (A a vu B).
+            \\ \medskip
             \centering
-            \begin{figure}%[H]
+            \begin{figure}
 
             \begin{tikzpicture}[>=stealth', shorten >=1pt, auto,
                 node distance=2.5cm, scale=1,
-                transform shape, align=center,]
+                transform shape, align=center,scale=0.75]
 
                 \begin{scope}[every node/.style={circle,thick,draw, minimum size=1cm}]
                     \node (A) at (0,0) {Alexis};
@@ -42,210 +40,193 @@
 
             \end{tikzpicture}
             \end{figure}
-        \end{itemize}
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
     \frametitle{\problemtitle}
-    Il y a deux cas possibles:
+    Il y a deux cas possibles :
     \begin{itemize}
-        \item<+-> \textbf{Cas 1:} La personne A a vu la personne B.
+        \item<+-> \textbf{Cas 1 :} La personne A a vu la personne B.
             \begin{itemize}
                 \item<+-> Donc la personne B n'est pas le meurtrier.
             \end{itemize}
-        \item<+-> \textbf{Cas 2:} La personne A n'a pas vu la personne B.
+        \item<+-> \textbf{Cas 2 :} La personne A n'a pas vu la personne B.
             \begin{itemize}
-                \item<+-> Donc la personne B n'est pas le meurtrier.
+                \item<+-> Donc la personne A n'est pas le meurtrier.
             \end{itemize}
     \end{itemize}
     \pause
-    \textbf{Solution}: On Applique la règle ci-dessus tout en éliminant les suspects petit à petit ce qui nous donne $n-1$ opérations. 
+    \textbf{Solution} : On Applique la règle ci-dessus tout en éliminant les suspects petit à petit ce qui nous donne $n-1$ opérations. (Attention au cas $n = 1$ !)
 \end{frame}
 
-\begin{frame}
-    est-ce que le noeud bleu à vu le noeuds vert ?
+\begin{frame}\frametitle{\problemtitle}
+    Est-ce que le nœud bleu à vu le nœud vert ?
     \centering
-            \begin{figure}%[H]
-                \begin{tikzpicture}[>=stealth', shorten >=1pt, auto,
-                    node distance=2.5cm, scale=1,
-                    transform shape, align=center,]
+    \begin{figure}%[H]
+        \begin{tikzpicture}[>=stealth', shorten >=1pt, auto,
+            node distance=2.5cm, scale=1,
+            transform shape, align=center,every node/.style={circle,thick,draw, minimum size=1cm}]
 
-                    \begin{scope}[every node/.style={circle,thick,draw, minimum size=1cm}]
-                        \node (A)[green] at (0,0) {Alexis};
-                        \node (B)[blue] at (0,3) {Bob};
-                        \node (C) at (2.5,4) {Caro};
-                        \node (D) at (5,0) {David};
-                        \node (E) at (2.5,-1) {Eliot};
-                        \node (F) at (5,3) {Frank} ;
-                    \end{scope}
+            \node (A)[ggreen] at (0,0) {Alexis};
+            \node (B)[blue] at (0,3) {Bob};
+            \node (C) at (2.5,4) {Caro};
+            \node (D) at (5,0) {David};
+            \node (E) at (2.5,-1) {Eliot};
+            \node (F) at (5,3) {Frank};
 
-                    \path[->] (A) edge node {} (C)
-                    (B) edge node {} (A)
-                    (D) edge node {} (B)
-                    (C) edge node {} (D)
-                    (E) edge node {} (A)
-                    (E) edge node {} (B)
-                    (E) edge node {} (C)
-                    (E) edge node {} (D)
-                    (E) edge node {} (F);
+            \path[->] (A) edge (C)
+            (B) edge (A)
+            (D) edge (B)
+            (C) edge (D)
+            (E) edge (A)
+            (E) edge (B)
+            (E) edge (C)
+            (E) edge (D)
+            (E) edge (F);
 
-                \end{tikzpicture}
-            \end{figure}
-\end{frame}
-
-
-\begin{frame}
-    est-ce que le noeud bleu à vu le noeuds vert ?
-    \centering
-            \begin{figure}%[H]
-                \begin{tikzpicture}[>=stealth', shorten >=1pt, auto,
-                    node distance=2.5cm, scale=1,
-                    transform shape, align=center,]
-
-                    \begin{scope}[every node/.style={circle,thick,draw, minimum size=1cm}]
-                        \node (A)[red] at (0,0) {\Huge X};
-                        \node (B)[blue] at (0,3) {Bob};
-                        \node (C)[green] at (2.5,4) {Caro};
-                        \node (D) at (5,0) {David};
-                        \node (E) at (2.5,-1) {Eliot};
-                        \node (F) at (5,3) {Frank} ;
-                    \end{scope}
-
-                    \path[->] (A) edge node {} (C)
-                    (B) edge node {} (A)
-                    (D) edge node {} (B)
-                    (C) edge node {} (D)
-                    (E) edge node {} (A)
-                    (E) edge node {} (B)
-                    (E) edge node {} (C)
-                    (E) edge node {} (D)
-                    (E) edge node {} (F);
-
-                \end{tikzpicture}
-            \end{figure}
+        \end{tikzpicture}
+    \end{figure}
 \end{frame}
 
 
-\begin{frame}
-    est-ce que le noeud bleu à vu le noeuds vert ?
+\begin{frame}\frametitle{\problemtitle}
+    Est-ce que le nœud bleu à vu le nœud vert ?
     \centering
-            \begin{figure}%[H]
-                \begin{tikzpicture}[>=stealth', shorten >=1pt, auto,
-                    node distance=2.5cm, scale=1,
-                    transform shape, align=center,]
+    \begin{figure}%[H]
+        \begin{tikzpicture}[>=stealth', shorten >=1pt, auto,
+            node distance=2.5cm, scale=1,
+            transform shape, align=center,every node/.style={circle,thick,draw, minimum size=1cm}]
+            \node (A)[red] at (0,0) {\Huge X};
+            \node (B)[blue] at (0,3) {Bob};
+            \node (C)[ggreen] at (2.5,4) {Caro};
+            \node (D) at (5,0) {David};
+            \node (E) at (2.5,-1) {Eliot};
+            \node (F) at (5,3) {Frank};
 
-                    \begin{scope}[every node/.style={circle,thick,draw, minimum size=1cm}]
-                        \node (A)[red] at (0,0) {\Huge X};
-                        \node (B)[red] at (0,3) {\Huge X};
-                        \node (C)[blue] at (2.5,4) {Caro};
-                        \node (D)[green] at (5,0) {David};
-                        \node (E) at (2.5,-1) {Eliot};
-                        \node (F) at (5,3) {Frank} ;
-                    \end{scope}
+            \path[->] (A) edge (C)
+            (B) edge (A)
+            (D) edge (B)
+            (C) edge (D)
+            (E) edge (A)
+            (E) edge (B)
+            (E) edge (C)
+            (E) edge (D)
+            (E) edge (F);
 
-                    \path[->] (A) edge node {} (C)
-                    (B) edge node {} (A)
-                    (D) edge node {} (B)
-                    (C) edge node {} (D)
-                    (E) edge node {} (A)
-                    (E) edge node {} (B)
-                    (E) edge node {} (C)
-                    (E) edge node {} (D)
-                    (E) edge node {} (F);
-
-                \end{tikzpicture}
-            \end{figure}
+        \end{tikzpicture}
+    \end{figure}
 \end{frame}
 
-\begin{frame}
-    est-ce que le noeud bleu à vu le noeuds vert ?
+
+\begin{frame}\frametitle{\problemtitle}
+    Est-ce que le nœud bleu à vu le nœud vert ?
     \centering
-            \begin{figure}%[H]
-                \begin{tikzpicture}[>=stealth', shorten >=1pt, auto,
-                    node distance=2.5cm, scale=1,
-                    transform shape, align=center,]
+    \begin{figure}%[H]
+        \begin{tikzpicture}[>=stealth', shorten >=1pt, auto,
+            node distance=2.5cm, scale=1,
+            transform shape, align=center,every node/.style={circle,thick,draw, minimum size=1cm}]
+            \node (A)[red] at (0,0) {\Huge X};
+            \node (B)[red] at (0,3) {\Huge X};
+            \node (C)[blue] at (2.5,4) {Caro};
+            \node (D)[ggreen] at (5,0) {David};
+            \node (E) at (2.5,-1) {Eliot};
+            \node (F) at (5,3) {Frank};
 
-                    \begin{scope}[every node/.style={circle,thick,draw, minimum size=1cm}]
-                        \node (A)[red] at (0,0) {\Huge X};
-                        \node (B)[red] at (0,3) {\Huge X};
-                        \node (C)[blue] at (2.5,4) {Caro};
-                        \node (D)[red] at (5,0) {\Huge X};
-                        \node (E) at (2.5,-1) {Eliot};
-                        \node (F)[green] at (5,3) {Frank} ;
-                    \end{scope}
+            \path[->] (A) edge (C)
+            (B) edge (A)
+            (D) edge (B)
+            (C) edge (D)
+            (E) edge (A)
+            (E) edge (B)
+            (E) edge (C)
+            (E) edge (D)
+            (E) edge (F);
 
-                    \path[->] (A) edge node {} (C)
-                    (B) edge node {} (A)
-                    (D) edge node {} (B)
-                    (C) edge node {} (D)
-                    (E) edge node {} (A)
-                    (E) edge node {} (B)
-                    (E) edge node {} (C)
-                    (E) edge node {} (D)
-                    (E) edge node {} (F);
-
-                \end{tikzpicture}
-            \end{figure}
+        \end{tikzpicture}
+    \end{figure}
 \end{frame}
 
-\begin{frame}
-    est-ce que le noeud bleu à vu le noeuds vert ?
+\begin{frame}\frametitle{\problemtitle}
+    Est-ce que le nœud bleu à vu le nœud vert ?
     \centering
-            \begin{figure}%[H]
-                \begin{tikzpicture}[>=stealth', shorten >=1pt, auto,
-                    node distance=2.5cm, scale=1,
-                    transform shape, align=center,]
+    \begin{figure}%[H]
+        \begin{tikzpicture}[>=stealth', shorten >=1pt, auto,
+            node distance=2.5cm, scale=1,
+            transform shape, align=center,every node/.style={circle,thick,draw, minimum size=1cm}]
+            \node (A)[red] at (0,0) {\Huge X};
+            \node (B)[red] at (0,3) {\Huge X};
+            \node (C)[blue] at (2.5,4) {Caro};
+            \node (D)[red] at (5,0) {\Huge X};
+            \node (E) at (2.5,-1) {Eliot};
+            \node (F)[ggreen] at (5,3) {Frank};
 
-                    \begin{scope}[every node/.style={circle,thick,draw, minimum size=1cm}]
-                        \node (A)[red] at (0,0) {\Huge X};
-                        \node (B)[red] at (0,3) {\Huge X};
-                        \node (C)[red] at (2.5,4) {\Huge X};
-                        \node (D)[red] at (5,0) {\Huge X};
-                        \node (E)[green] at (2.5,-1) {Eliot};
-                        \node (F)[blue] at (5,3) {Frank} ;
-                    \end{scope}
+            \path[->] (A) edge (C)
+            (B) edge (A)
+            (D) edge (B)
+            (C) edge (D)
+            (E) edge (A)
+            (E) edge (B)
+            (E) edge (C)
+            (E) edge (D)
+            (E) edge (F);
 
-                    \path[->] (A) edge node {} (C)
-                    (B) edge node {} (A)
-                    (D) edge node {} (B)
-                    (C) edge node {} (D)
-                    (E) edge node {} (A)
-                    (E) edge node {} (B)
-                    (E) edge node {} (C)
-                    (E) edge node {} (D)
-                    (E) edge node {} (F);
-
-                \end{tikzpicture}
-            \end{figure}
+        \end{tikzpicture}
+    \end{figure}
 \end{frame}
 
-\begin{frame}
-    est-ce que le noeud bleu à vu le noeuds vert ?
+\begin{frame}\frametitle{\problemtitle}
+    Est-ce que le nœud bleu à vu le nœud vert ?
     \centering
-            \begin{figure}%[H]
-                \begin{tikzpicture}[>=stealth', shorten >=1pt, auto,
-                    node distance=2.5cm, scale=1,
-                    transform shape, align=center,]
+    \begin{figure}%[H]
+        \begin{tikzpicture}[>=stealth', shorten >=1pt, auto,
+            node distance=2.5cm, scale=1,
+            transform shape, align=center,every node/.style={circle,thick,draw, minimum size=1cm}]
+            \node (A)[red] at (0,0) {\Huge X};
+            \node (B)[red] at (0,3) {\Huge X};
+            \node (C)[red] at (2.5,4) {\Huge X};
+            \node (D)[red] at (5,0) {\Huge X};
+            \node (E)[ggreen] at (2.5,-1) {Eliot};
+            \node (F)[blue] at (5,3) {Frank};
 
-                    \begin{scope}[every node/.style={circle,thick,draw, minimum size=1cm}]
-                        \node (A)[red] at (0,0) {\Huge X};
-                        \node (B)[red] at (0,3) {\Huge X};
-                        \node (C)[red] at (2.5,4) {\Huge X};
-                        \node (D)[red] at (5,0) {\Huge X};
-                        \node (E)[green] at (2.5,-1) {Eliot};
-                        \node (F)[red] at (5,3) {\Huge X} ;
-                    \end{scope}
+            \path[->] (A) edge (C)
+            (B) edge (A)
+            (D) edge (B)
+            (C) edge (D)
+            (E) edge (A)
+            (E) edge (B)
+            (E) edge (C)
+            (E) edge (D)
+            (E) edge (F);
 
-                    \path[->] (A) edge node {} (C)
-                    (B) edge node {} (A)
-                    (D) edge node {} (B)
-                    (C) edge node {} (D)
-                    (E) edge node {} (A)
-                    (E) edge node {} (B)
-                    (E) edge node {} (C)
-                    (E) edge node {} (D)
-                    (E) edge node {} (F);
+        \end{tikzpicture}
+    \end{figure}
+\end{frame}
 
-                \end{tikzpicture}
-            \end{figure}
+\begin{frame}\frametitle{\problemtitle}
+    Est-ce que le nœud bleu à vu le nœud vert ?
+    \centering
+    \begin{figure}%[H]
+        \begin{tikzpicture}[>=stealth', shorten >=1pt, auto,
+            node distance=2.5cm, scale=1,
+            transform shape, align=center,every node/.style={circle,thick,draw, minimum size=1cm}]
+            \node (A)[red] at (0,0) {\Huge X};
+            \node (B)[red] at (0,3) {\Huge X};
+            \node (C)[red] at (2.5,4) {\Huge X};
+            \node (D)[red] at (5,0) {\Huge X};
+            \node (E)[ggreen] at (2.5,-1) {Eliot};
+            \node (F)[red] at (5,3) {\Huge X};
+
+            \path[->] (A) edge (C)
+            (B) edge (A)
+            (D) edge (B)
+            (C) edge (D)
+            (E) edge (A)
+            (E) edge (B)
+            (E) edge (C)
+            (E) edge (D)
+            (E) edge (F);
+
+        \end{tikzpicture}
+    \end{figure}
 \end{frame}

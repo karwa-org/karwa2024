@@ -1,16 +1,15 @@
-
 \begin{frame}
     \frametitle{\problemtitle}
         \begin{block}
-            {Problème} Trouver si le nombre de transposition d'une permutation est pair ou impair.
+            {Problème} Trouver si le nombre de transpositions d'une permutation est pair ou impair.
         \end{block}
         \pause
-        \textbf{Solution Naïve}: trier la liste et compter le nombre de transposition, trop lent.
+        \textbf{Solution Naïve} : trier la liste et compter le nombre de transpositions, trop lent.
 \end{frame}
 
 \begin{frame}
     \frametitle{\problemtitle}
     \begin{itemize}
-        \item<+-> on connais la position dans la liste dans laquelle devrais être chaque ballons, on peut donc trier la liste en O(n) en permutant chaque ballon avec sa place supposée si le ballon n'est pas a sa place supposée.
+        \item<+-> on connait la position dans la liste dans laquelle devrait être chaque ballon, on peut donc trier la liste en O(n) en permutant chaque ballon avec sa place supposée si le ballon n'est pas à sa place supposée.
     \end{itemize}
 \end{frame}

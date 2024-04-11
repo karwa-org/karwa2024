@@ -4,7 +4,7 @@
             {Problème} Trouver deux lignes qui sont identiques en effectuant des rotations sur les lignes.
         \end{block}
         \pause
-        \textbf{Solution Naïve}: Pour chaque ligne, tester si une des autres lignes est identique après une rotation. $\mathcal O(n^2 \cdot m^2)$ Trop lent !\\
+        \textbf{Solution Naïve} : Pour chaque ligne, tester si une des autres lignes est identique après une rotation. $\mathcal O(n^2 \cdot m^2)$ Trop lent !\\
         \pause
         \textbf{Solution}: HASH !
         \begin{block} {Hash Polynomial}
@@ -12,7 +12,7 @@
             $(b \cdot A^0 + o \cdot A^1 + n \cdot A^2 + j \cdot A^3 + o \cdot A^4 + u \cdot A^5 + r \cdot A^6) \, mod \, B$
         \end{block}
         \pause
-        Dès lors on peut créer toutes les rotations d'une ligne en $\mathcal O(n)$.\\
+        Dès lors, on peut créer toutes les rotations d'une ligne en $\mathcal O(n)$.\\
         Il suffit de retirer le dernier caractère et de le mettre au début.
         \pause
         \begin{align*}
@@ -28,7 +28,7 @@
             {Problème} Trouver deux lignes qui sont identiques en effectuant des rotations sur les lignes.
         \end{block}
     Suffit donc de garder dans un dictionnaire les hash et voir si deux hash sont identiques.\\
-    \textbf{ATTENTION:} Choisir un bon $B$ pour éviter les collisions. (ici $B$ $\approx$ $2^{50}$ suffit)\\
+    \textbf{ATTENTION :} Choisir un bon $B$ pour éviter les collisions. (ici $B$ $\approx$ $2^{50}$ suffit)\\
     \pause
-    Complexité: $\mathcal O(n \cdot m)$
+    Complexité : $\mathcal O(n \cdot m)$
 \end{frame}

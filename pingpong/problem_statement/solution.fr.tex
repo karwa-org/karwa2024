@@ -4,14 +4,14 @@
             {Problème} Maximiser le nombre de verres à boire étant donné une balle qui rebondit tous les $x$ mètres.
         \end{block}
         \pause
-        \textbf{Solution Naïve}: Pour chaque rebond, tester si le verre $a_i$ est accessible. $\mathcal O(n^2)$ Trop lent !\\
+        \textbf{Solution Naïve} : Pour chaque rebond, tester si le verre $a_i$ est accessible. $\mathcal O(n^2)$ Trop lent !\\
         \pause
-        \textbf{Solution}: Simuler chaque rebond de manière intelligente, pour un rebond $k$ on itère à travers tous ses multiples. \\
+        \textbf{Solution} : Simuler chaque rebond de manière intelligente, pour un rebond $k$ on itère à travers tous ses multiples. \\
         \pause
         \begin{align}
             &\Rightarrow \sum_{i=1}^{n} \frac{n}{i}\\
             &\Rightarrow n \cdot \underbrace{\sum_{i=1}^{n} \frac{1}{i}}_{\text{Série harmonique $\mapsto log n + \gamma$ }}
         \end{align}
-        $\Rightarrow$ ce qui mène à une complexité de $\mathcal O(n \cdot log n)$
+        $\Rightarrow$ ce qui mène à une complexité de $\mathcal O(n \cdot log n)$.
 
 \end{frame}
