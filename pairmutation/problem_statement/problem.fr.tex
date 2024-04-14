@@ -8,18 +8,18 @@ Dans le prestigieux \textbf{K}omté \textbf{A}cculé mais \textbf{R}établit et 
 
 Cette année, vous avez l'honneur de pouvoir vous présenter et de montrer à tous que vous êtes le mage suprême. L'épreuve qui vous est assignée est la suivante :
 
-Devant vous sont disposés $n$ ballons numérotés de 1 à $n$. Ces ballons sont magiques et changent de place, mais vous réalisez rapidement qu'ils ne se déplacent pas de manière aléatoire ; ils suivent plutôt un schéma. En effet, ils se dirigent toujours vers leur position respective.
+Devant vous sont disposés $n$ ballons numérotés de 1 à $n$. Ces ballons sont magiques et changent de place, mais vous réalisez rapidement qu'ils ne se déplacent pas de manière aléatoire ; ils suivent plutôt un schéma. En effet, ils se dirigent toujours vers la position associé à leurs numéro.
 
 Votre tâche consiste à déterminer le nombre de permutations que cette séquence présente. Heureusement, vous connaissez un sort qui fournit cette réponse, à condition que vous puissiez déterminer si cette séquence comporte un nombre pair ou impair de permutations.
 
-Une permutation consiste en l'échange de positions entre deux ballons. Par exemple, si le ballon 2 se déplace vers le ballon 5 et que le ballon 5 se déplace vers le ballon 2, cela compte comme une permutation. Il est assuré que toute séquence peut être décomposée en un nombre fini de permutations de deux ballons.
+Une permutation consiste en l'échange de positions entre deux ballons. Il est assuré que toute séquence peut être décomposée en un nombre fini de permutations de deux ballons.
 
 Pour illustrer cela, prenons l'exemple concret suivant :
 \begin{align*}
     3\, 1\, 2\,
 \end{align*}
 
-Cette permutation est paire, car d'abord, les ballons à la position 1 et 2 sont échangés, puis les ballons à la position 2 et 3 sont échangés. Ainsi, cette permutation est paire puisque deux échanges de ballons ont eu lieu.
+Dans cet exemple, le nombre de permutation est pair, car il suffit de permuter les ballons 1 et 2. Puis de permuter les ballons 2 et 3 pour que tout les ballons soient à leurs positions respectives.
 
 \begin{Input}
     L'entrée consiste en :
