@@ -8,10 +8,11 @@
 \newcommand{\maxn}{}
 
 Vous êtes le coach de l'équipe de Belgique de course de bateau en papier sur l'eau ! La compétition consiste à déposer son bateau dans une rivière. Celui-ci se laissera porter par le courant de l'eau.
-Vous savez que les autres équipes sont très fortes étant donné qu'ils ont des géologues qui analysent le terrain de fond en comble. Vous connaissez les possibles endroits où les bateaux vont arriver ainsi que leurs départs.
-De plus, cette compétition a une particularité des plus étranges : la longueur des courants est toujours égale à $5$ mètres.
+Vous savez que les autres équipes sont très fortes étant donné qu'ils ont des géologues qui analysent le terrain de fond en comble. Vous ne connaissez pas où la course va commencer et où elle va terminer. Cependant Vous connaissez les possibles endroits où la course peut commencer et où elle peut terminer.
 
-Dès lors, vous voulez savoir pour chaque arrivée à quel endroit vous devez déposer votre bateau. Pour que celui-ci arrive le plus vite possible !
+Dès lors, vous voulez savoir pour chaque arrivée potentielle, à quel endroit de départ vous devez déposer votre bateau pour que celui-ci arrive le plus vite possible !
+
+De plus, cette compétition a une particularité des plus étranges : la longueur des courants est toujours égale à $5$ mètres.
 
 \begin{figure}[h]
     \begin{center}
@@ -40,7 +41,7 @@ Dès lors, vous voulez savoir pour chaque arrivée à quel endroit vous devez d�
 
         \end{tikzpicture}
     \end{center}
-    \caption{Illustration du test 1, la rivière rouge représente celle où l'on commence potentiellement et la rivière bleue représente celle où l'on termine}.
+    \caption{Illustration du test 1, la rivière rouge représente celle où l'on commence potentiellement et la rivière bleue représente celle où l'on termine potentiellement}.
 \end{figure}
 
 \begin{Input}
@@ -50,8 +51,8 @@ Dès lors, vous voulez savoir pour chaque arrivée à quel endroit vous devez d�
         \item $m$ lignes, chacune contenant 2 entiers $u$ et $v$ ($1 \le u,v \le n$, $1 \le v \le n$), indiquant qu'il y a un courant de la rivière $u$ à la rivière $v$,
         \item une ligne avec un entier $d$ ($0 \le d \le n$), le nombre de rivières où l'on peut commencer,
         \item une ligne avec $d$ entiers, le numéro des rivières où l'on peut commencer,
-        \item une ligne avec un entier $a$ ($ 0 \le a \le n$), le nombre de rivières où l'on termine,
-        \item une ligne avec $a$ entiers, le numéro des rivières où l'on termine la course.
+        \item une ligne avec un entier $a$ ($ 0 \le a \le n$), le nombre de rivières où l'on peut terminer,
+        \item une ligne avec $a$ entiers, le numéro des rivières où l'on peut terminer la course.
     \end{enumerate}
 \end{Input}
 
