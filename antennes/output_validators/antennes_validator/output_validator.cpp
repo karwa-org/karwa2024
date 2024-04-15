@@ -3,7 +3,7 @@
 using namespace std;
 #define int long long
 
-signed main(int argc, char *argv[]) {
+signed main(signed argc, char *argv[]) {
     // Set up the input and answer streams.
     std::ifstream in(argv[1]);
     std::ifstream ans(argv[2]); // Only for custom checker.
