@@ -13,8 +13,8 @@
        \item<+-> Définir pour $k \in \mathbb{N}$ :
           \begin{align*}
           \lambda_{k+1}(v)&=\begin{cases}
-              \underset{v'\in\mathsf{succ}(v)}{\min} \lambda_{k}(v')+1 &\text{if } v\in V_0\\
-              \underset{v'\in\mathsf{succ}(v)}{\max} \lambda_{k}(v')+1 &\text{otherwise}.
+              \underset{v'\in\mathsf{succ}(v)}{\min} \lambda_{k}(v')+1 &\text{si } v\in V_0\\
+              \underset{v'\in\mathsf{succ}(v)}{\max} \lambda_{k}(v')+1 &\text{sinon}.
           \end{cases}
           \end{align*}
           et calculer jusqu'à ce que $\lambda_{k+1} = \lambda_{k}$, puis afficher $\lambda_{k}(0)$ (le mieux qu'on puisse avoir depuis le sommet $0$ quand l'adversaire joue la pire situation pour nous).
