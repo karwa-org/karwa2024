@@ -5,15 +5,11 @@
 }
 
 Oh non, il y a une bombe dans votre cuisine ! Vous devez la désamorcer avant qu'elle n'explose. Pour ce faire, vous devez résoudre un puzzle.
-Vous disposez d'une grille avec $n$ lignes et $m$ colonnes. Chaque case de la grille contient une couleur. Chaque ligne contient deux flèches qui indiquent vers la droite et une autre vers la gauche.
-Quand on appuie sur l'une des flèches, il y a deux cas possibles :
-\begin{itemize}
-    \item Si la flèche pointe vers la droite, alors toutes les couleurs de la ligne sont déplacées d'une case vers la droite.
-    \item Si la flèche pointe vers la gauche, alors toutes les couleurs de la ligne sont déplacées d'une case vers la gauche.
-\end{itemize}
+Vous disposez d'une grille avec $n$ lignes et $m$ colonnes. Chaque case contient une couleur. Chaque ligne contient deux flèches, une qui pointe vers la gauche, l'autre vers la droite.
+Quand on appuie sur la flèche de droite, toutes les couleurs de la ligne sont déplacées d'une case vers la droite, et quand on appuie sur celle de gauche
 Les lignes sont cycliques, donc si une couleur sort d'un côté de la ligne, elle rentre de l'autre côté.
 
-Votre but est de trouver deux lignes qui sont égales après avoir entré une séquence de flèches. Si vous trouvez deux lignes qui sont égales, alors vous avez désamorcé la bombe. Si vous n'arrivez pas à trouver deux lignes qui sont égales, alors la bombe explose.
+Votre but est de trouver deux lignes qui sont égales après avoir entré une séquence de flèches. Si vous trouvez deux lignes qui sont égales, alors vous avez désamorcé la bombe. Si vous n'arrivez pas à trouver deux lignes qui sont égales, alors la bombe explose !
 
 \begin{figure}[H]
     \centering
@@ -24,13 +20,13 @@ Votre but est de trouver deux lignes qui sont égales après avoir entré une s�
 \begin{Input}
     L'entrée consiste en :
     \begin{itemize}
-        \item une ligne avec deux entiers $n$ et $m$ ($0\leq n,m \leq 10^4$), respectivement le nombre de lignes et le nombre de colonnes dans la grille,
-        \item $n$ lignes, chacune contenant une chaîne de caractère de longueur $m$, le $j$-ème caractère de la $i$-ème ligne est $a_{i,j}$, la couleur de la cellule $(i,j)$.
+        \item Une ligne avec deux entiers $n$ et $m$ ($0\leq n,m \leq 10^4$), respectivement le nombre de lignes et le nombre de colonnes dans la grille,
+        \item $n$ lignes, chacune contenant une chaîne de caractères de longueur $m$. Le $j$-ème caractère de la $i$-ème ligne est $a_{i,j}$, la couleur de la cellule $(i,j)$.
     \end{itemize}
-    Il est garanti que $a_{i,j}$ est une lettre de l'alphabet \textbf{majuscule OU minuscule}.\\
-    Il est aussi garanti que $n \cdot m \leq 5 \cdot 10^5$
+    Il est garanti que $a_{i,j}$ est une lettre de l'alphabet \textbf{majuscule ou minuscule}.\\
+    Il est aussi garanti que $n \times m \leq 5 \times 10^5$.
 \end{Input}
 
 \begin{Output}
-    L'indice des deux lignes dans l'ordre croissant qui sont égales. Si plusieurs lignes correspondent, affichez la paire ayant le plus petit numéro de ligne. Si ce plus petit numéro est identique pour deux paires, prenez la paire avec le plus petit deuxième numéro. S'il n'est pas possible de trouver deux lignes qui sont égales, sortez \texttt{BOOM!}.
+    L'indice des deux lignes qui sont égales en ordre croissant. S'il y a plusieurs paires, affichez celle qui a la plus petit premier indice. Si deux paires ont le même premier indice, affichez celle qui a le plus petit deuxième indice. Si vous ne trouvez pas deux lignes qui sont égales, affichez \texttt{BOOM!}.
 \end{Output}
