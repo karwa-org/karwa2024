@@ -4,12 +4,9 @@
             {Problème} Trouver si le nombre de transpositions d'une permutation est pair ou impair.
         \end{block}
         \pause
-        \textbf{Solution Naïve} : trier la liste et compter le nombre de transpositions, trop lent.
-\end{frame}
-
-\begin{frame}
-    \frametitle{\problemtitle}
-    \begin{itemize}
-        \item<+-> on connait la position dans la liste dans laquelle devrait être chaque ballon, on peut donc trier la liste en O(n) en permutant chaque ballon avec sa place supposée si le ballon n'est pas à sa place supposée.
+        \textbf{Solution naïve} : trier la liste et compter le nombre de transpositions, trop lent.
+        \pause
+        \begin{itemize}
+            \item<+-> On connait la position dans la liste dans laquelle devrait être chaque ballon, on peut donc trier la liste en $\mathcal{O}(n)$ en permutant chaque ballon avec sa place supposée si le ballon n'y est pas encore.
     \end{itemize}
 \end{frame}
