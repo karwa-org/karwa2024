@@ -5,18 +5,18 @@
 }
 
 \begin{frame}{Random facts}
-    \begin{block}{Jury work}
+    \begin{block}{Jury}
       \begin{itemize}[<+->]
         % git rev-list --all main | wc -l
-        \item 632 commits
+        \item 193 commits (KARWa 2023 : 179)
         % bt stats
-        %\item 681 secret test cases (last year: 486) ($\approx 57$ per problem!)
-        %\item 248 jury solutions (last year: 232)
+        \item 693 test cases secrets (KARWa 2023 : 312) ($\approx 53$ par problème !)
+        \item 28 solutions du jury (KARWa 2023 : 52)
         % cd main ; for dir in */ ; do echo "$dir $(cloc --by-file ${dir}submissions/accepted | tail -n 4 | head -n 1)" ; done
         % cd main; for dir in */ ; do cloc --by-file ${dir}submissions/accepted | tail -n 4 | head -n 1 | tr -s ' ' | cut -d ' ' -f 4 ; done
-        %\item The minimum\footnotemark{} number of lines the jury needed to solve all problems is
-        %\[ 10 + 114 + 27 + 5 + 64 + 51 + 42 + 32 + 43 + 23 + 10 + 6 = 427 \]
-        %On average $35.5$ lines per problem, up from $9.6$ in the BAPC
+        \item Le nombre minimum de lignes que le jury a eu besoin pour résoudre tous les problèmes est
+        \[ 33+16+50+17+48+20+8+13+17+15+40+1+48 = 326. \]
+        En moyenne $25$ lignes par problème.
       \end{itemize}
     \end{block}
     %\footnotetext{\emph{After} codegolfing}
