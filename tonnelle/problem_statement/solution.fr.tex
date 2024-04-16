@@ -1,13 +1,20 @@
 \begin{frame}
     \frametitle{\problemtitle}
     \begin{block}{Problème}
-        Print $4\sqrt n$ with sufficiently many digits.
+        On veut calculer l'aire du plus petit rectangle contenant un ensemble de $n$ points.
     \end{block}
     \pause
-    \begin{itemize}
-        % TODO: Remove this comment when you're done writing the solutions.
-        \item<+-> Naive solution: do something stupid. $\mathcal O(2^n)$ is too slow!
-        \item<+-> Instead, just compute the answer. $\mathcal O(1)$.
-    \end{itemize}
-    % \solvestats
+    Pour chaque direction, le plus petit rectangle aligné avec cette direction s'obtient en trouvant les points extrêmes selon cette direction et son orthogonale. \newline \newline
+    \textbf{Solution naïve} : Prendre le plus petit rectangle aligné verticalement. \\
+    \pause
+    Cette approche ne marche malheureusement pas en général, par exemple pour un carré penché.
+\end{frame}
+
+\begin{frame}
+    \frametitle{\problemtitle}
+    \textbf{Solution} : Prendre le plus petit rectangle aligné avec un segment de l'enveloppe convexe des points. \newline \newline
+    \pause
+    Il est inutile de regarder toutes les directions possibles, puisque le plus petit rectangle aura un côté confondu avec un des segments de l'enveloppe convexe des points. \newline \newline
+    \pause
+    L'enveloppe convexe peut se calculer en $\mathcal{O}(n \log(n))$, mais une implémentation naïve en $\mathcal{O}(n^2)$ est ici suffisante car tester la direction donnée par chaque segment de l'enveloppe convexe fournit un code en $\mathcal{O}(n^2)$.
 \end{frame}
