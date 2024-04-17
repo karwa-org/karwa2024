@@ -2,8 +2,6 @@
 /.envrc
 /BAPCtools/
 /bt.sh
-/tonnelle/ans.py
-/tonnelle/test_case.py
 contest*.pdf
 solutions*.pdf
 */problem.*.pdf
